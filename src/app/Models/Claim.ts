@@ -1,6 +1,5 @@
-import { Account } from "./Account";
 import { Decission } from "./Decission";
-import { EtatClaim } from "./EtatClaim";
+import { Account } from "./account";
 
 export class Claim {
     idClaim!: number;

@@ -1,5 +1,6 @@
-import { Account } from "./Account";
 import { User } from "./User";
+import { Account } from "./account";
+
 
 export class Inscription {
     idInscription!: number;
@@ -8,7 +9,7 @@ export class Inscription {
     coverLetter!: string;
     classStudent!: string;
     departProf!: string;
-    account!: Account;
+    account!: Account  ;
     user !: User ;
 
     }

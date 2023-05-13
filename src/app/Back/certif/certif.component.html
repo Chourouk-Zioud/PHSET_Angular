@@ -1,0 +1,41 @@
+<app-nav-bar-back></app-nav-bar-back>
+
+<div class="container-scroller">
+
+    <app-nav-vertical></app-nav-vertical>
+    <div class="main-panel">
+        <div class="content-wrapper">
+            <div class="row">
+                <div class="col-lg-12 grid-margin stretch-card">
+                    <div class="card">
+                        <p class="card-description"> <code>List Certificates</code>
+                        </p>
+                        <div class="card-body">
+                            <div class="row">
+
+                                <div class="col-sm-6 stretch-card grid-margin" *ngFor="let c of certif | paginate: { itemsPerPage: 4, currentPage: p }">
+                                    <div>
+                                        <div class="card">
+                                            <div class="card-body p-0">
+                                                <iframe width="650" height="500" [src]="getsafeUrl(c.certifUrl)"
+                                                    frameborder="0"></iframe>
+                                            </div>
+                                            
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        <div class="mt-8 py-5 d-flex justify-content-center align-items-center">
+            <div class="text-center">
+                <pagination-controls (pageChange)="p = $event"></pagination-controls>
+            </div>
+        </div>
+    </div>
+</div>
