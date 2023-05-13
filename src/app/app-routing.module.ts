@@ -1,47 +1,50 @@
-import { Component, NgModule } from '@angular/core';
+import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { NavBarFrontComponent } from './Front/nav-bar-front/nav-bar-front.component';
-import { NotFoundComponent } from './Front/not-found/not-found.component';
-import { TrainingComponent } from './Front/training/training/training.component';
+import { AddClaimComponent } from './Front/add-claim/add-claim.component';
+import { ViewClaimsComponent } from './Front/view-claims/view-claims.component';
+import { ViewOneClaimComponent } from './Front/view-one-claim/view-one-claim.component';
+import { PassMcqComponent } from './Front/pass-mcq/pass-mcq.component';
+import { ViewInterviewJuryComponent } from './Front/view-interview-jury/view-interview-jury.component';
+import { ViewGridEvaluationComponent } from './Front/view-grid-evaluation/view-grid-evaluation.component';
 import { NavBarBackComponent } from './Back/nav-bar-back/nav-bar-back.component';
-import { AddTrainingComponent } from './Front/training/add-training/add-training.component';
-import { TrainingItemComponent } from './Front/training/training-item/training-item.component';
-import { PageAcceuilKaisComponent } from './Front/page-acceuil-kais/page-acceuil-kais.component';
-import { CourseComponent } from './Front/course/course/course.component';
-import { CentreExamenComponent } from './Front/exam/centre-examen/centre-examen.component';
-import { TestComponent } from './Front/test/test.component';
-import { ChapterComponent } from './Front/chapter/chapter/chapter.component';
-import { ChapterItemComponent } from './Front/chapter/chapter-item/chapter-item.component';
-import { CertificateComponent } from './Front/certificate/certificate/certificate.component';
-import { FaqComponent } from './Front/faq/faq/faq.component';
-import { TrainingBackComponent } from './Back/training-back/training-back.component';
-import { ReponseFAQComponent } from './Front/reponseFAQ/reponse-faq/reponse-faq.component';
-import { QuestionComponent } from './Back/FAQ/question/question.component';
-import { ExamBackComponent } from './Back/FAQ/exam-back/exam-back.component';
-import { ReponseComponent } from './Back/FAQ/reponse/reponse.component';
+import { MCQQuestionsComponent } from './Back/mcq-questions/mcq-questions.component';
+import { ListQuestionsComponent } from './Back/list-questions/list-questions.component';
+import { UpdateQuestionComponent } from './Back/update-question/update-question.component';
+import { ClaimStaticsComponent } from './Back/claim-statics/claim-statics.component';
+import { ListClaimsComponent } from './Back/list-claims/list-claims.component';
+import { DecissionClaimComponent } from './Back/decission-claim/decission-claim.component';
+import { ChatBotComponent } from './Front/chat-bot/chat-bot.component';
+import { ClaimYearReportComponent } from './Back/claim-year-report/claim-year-report.component';
+import { EvaluateurInterviewComponent } from './Back/evaluateur-interview/evaluateur-interview.component';
+import { ClaimsExcelComponent } from './Back/claims-excel/claims-excel.component';
+import { EvaluatorsCalanderComponent } from './Back/evaluators-calander/evaluators-calander.component';
+import { DelibNoteComponent } from './Back/delib-note/delib-note.component';
+import { AddTasksAndEvaluationComponent } from './Back/add-tasks-and-evaluation/add-tasks-and-evaluation.component';
+import { ViewTasksAndEvaluationsComponent } from './Back/view-tasks-and-evaluations/view-tasks-and-evaluations.component';
+import { ConsultIntCondidatComponent } from './Front/consult-int-condidat/consult-int-condidat.component';
 
 const routes: Routes = [
-  { path: '', redirectTo: 'home', pathMatch: 'full' },
-  // FRONT
-  { path: 'navFront', component: NavBarFrontComponent },
-  { path: 'home', component: PageAcceuilKaisComponent },
-  { path: 'training', component: TrainingComponent },
-  { path: 'addTraining', component: AddTrainingComponent },
-  { path: 'training/:id', component: TrainingItemComponent },
-  { path: 'course', component: CourseComponent },
-  { path: 'chapter/:id', component: ChapterComponent },
-  { path: 'chapterItem/:id', component: ChapterItemComponent },
-  { path: 'centreExamen', component: CentreExamenComponent },
-  { path: 'faq', component: FaqComponent },
-  { path: 'reponseFAQ', component: ReponseFAQComponent },
-  { path: 'certif', component: CertificateComponent },
-  // FRONT
-  { path: 'navBack', component: NavBarBackComponent },
-  { path: 'Trainingback', component: TrainingBackComponent },
-  { path: 'faqBack', component: QuestionComponent },
-  { path: 'ExamBack', component: ExamBackComponent },
-  { path: 'responeQuestion/:id', component: ReponseComponent },
-  { path: '**', component: NotFoundComponent },
+  { path: 'newclaims', component: AddClaimComponent },
+  { path: 'grid', component: ViewGridEvaluationComponent },
+  { path: 'claims', component: ViewClaimsComponent },
+  { path: 'claim/view', component: ViewOneClaimComponent },
+  { path: 'mcq', component: PassMcqComponent },
+  { path: 'InterviewList', component: ViewInterviewJuryComponent },
+  { path: 'navback', component: NavBarBackComponent },
+  { path: 'questions', component: MCQQuestionsComponent },
+  { path: 'listquestions', component: ListQuestionsComponent },
+  { path: 'updateQuest', component: UpdateQuestionComponent },
+  { path: 'claimstatics', component: ClaimStaticsComponent },
+  { path: 'claimlist', component: ListClaimsComponent },
+  { path: 'decission', component: DecissionClaimComponent },
+  { path: 'chaimreport', component: ClaimYearReportComponent },
+  { path: 'listevalint', component: EvaluateurInterviewComponent },
+  { path: 'Excel', component: ClaimsExcelComponent },
+  { path: 'evalcalander', component: EvaluatorsCalanderComponent },
+  { path: 'delib', component: DelibNoteComponent },
+  { path: 'neweval', component: AddTasksAndEvaluationComponent },
+  { path: 'viewevaluations', component: ViewTasksAndEvaluationsComponent },
+  { path: 'intcondidat', component: ConsultIntCondidatComponent },
 ];
 
 @NgModule({

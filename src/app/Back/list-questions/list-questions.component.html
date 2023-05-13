@@ -1,0 +1,163 @@
+<app-nav-bar-back></app-nav-bar-back>
+<div class="container-scroller">
+  <nav class="sidebar sidebar-offcanvas" id="sidebar">
+    <ul class="nav">
+      <li class="nav-item nav-profile border-bottom">
+        <a href="#" class="nav-link flex-column">
+          <div class="nav-profile-image">
+            <img src="../../../assets/Back/images/faces/face1.jpg" alt="profile" />
+            <!--change to offline or busy as needed-->
+          </div>
+          <div class="nav-profile-text d-flex ml-0 mb-3 flex-column">
+            <span class="font-weight-semibold mb-1 mt-2 text-center">Antonio Olson</span>
+            <span class="text-secondary icon-sm text-center">$3499.00</span>
+          </div>
+        </a>
+      </li>
+      
+      <li class="pt-2 pb-1">
+        <span class="nav-item-head">Menu</span>
+      </li>
+      
+      <li class="nav-item">
+        <a class="nav-link" routerLink="/claimlist">
+          <i class="mdi mdi-format-list-bulleted menu-icon"></i>
+          <span class="menu-title">Claim list</span>
+        </a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" routerLink="/claimstatics">
+          <i class="mdi mdi-chart-bar menu-icon"></i>
+          <span class="menu-title">Claim statics</span>
+        </a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" routerLink="/delib">
+          <i class="mdi mdi-email-outline menu-icon"></i>
+          <span class="menu-title">Deliberation notes</span>
+        </a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" routerLink="/listevalint">
+          <i class="mdi mdi-format-line-weight menu-icon"></i>
+          <span class="menu-title">Interview list</span>
+        </a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" routerLink="/evalcalander">
+          <i class="mdi mdi-calendar menu-icon"></i>
+          <span class="menu-title">Calender of Interviews</span>
+        </a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" routerLink="/listquestions">
+          <i class="mdi mdi mdi-comment-question-outline menu-icon"></i>
+          <span class="menu-title">List of questions</span>
+        </a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" routerLink="/viewevaluations">
+          <i class="mdi mdi mdi mdi-contrast-box menu-icon"></i>
+          <span class="menu-title">List of evaluations</span>
+        </a>
+      </li>
+    </ul>
+  </nav>
+
+
+    <div class="main-panel">
+        <div class="content-wrapper">
+            <div class="row">
+                <div class="col-lg-12 grid-margin stretch-card">
+                    <div class="card">         
+                        <div class="card-body">
+                            <h4 class="card-title">List of questions</h4>
+                            <div class="text-center">
+                                <button class="btn btn-success btn-rounded btn-fw btn-lg"
+                                    routerLink="/questions">Add
+                                    new questions</button>
+                            </div>
+                            <br><br><br>
+                            <div class="row">
+                                <div class="col-sm-11 stretch-card grid-margin text-center">
+
+                                    <div class="table-responsive">
+                                        <table class="table table-bordered">
+                                            <thead>
+                                                <tr>
+                                                    <th style="color: #990100;">#</th>
+                                                    <th>Question Type</th>
+                                                    <th>Question level</th>
+                                                    <th>Question</th>
+                                                    <th colspan="2" class="text-center">Responses</th>
+                                                    <th></th>
+
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr *ngFor="let q of questions | paginate: { itemsPerPage: 5 , currentPage: p } , let i=index ">
+                                                    <td style="color: #990100;" *ngIf="p==null">{{ i + 1}}</td>
+                                                    <td style="color: #990100;" *ngIf="p!=null">{{ (p-1) * 5 + i + 1}}</td>
+                                                    <td>{{q.typeTest}}</td>
+                                                    <td>{{q.questionLevel}}</td>
+                                                    <td>{{q.nameQuestion}}</td>
+                                                    <td>
+                                                        <tr>{{q.responses[0].response}}</tr>
+                                                        <br>
+                                                        <tr>{{q.responses[1].response}}</tr>
+                                                        <br>
+                                                        <tr>{{q.responses[2].response}}</tr>
+                                                        <br>
+                                                    </td>
+                                                    <td>
+                                                        <tr><span style="color: #990100; font-weight: bold;"
+                                                                *ngIf="!q.responses[0].correct"> {{q.responses[0].correct}}
+                                                            </span>
+                                                            <span style="color: green; font-weight: bold;"
+                                                                *ngIf="q.responses[0].correct"> {{q.responses[0].correct}}
+                                                            </span>
+                                                        </tr>
+                                                        <br>
+                                                        <tr><span style="color: #990100; font-weight: bold;"
+                                                                *ngIf="!q.responses[1].correct"> {{q.responses[1].correct}}
+                                                            </span>
+                                                            <span style="color: green; font-weight: bold;"
+                                                                *ngIf="q.responses[1].correct"> {{q.responses[1].correct}}
+                                                            </span>
+                                                        </tr>
+                                                        <br>
+                                                        <tr><span style="color: #990100; font-weight: bold;"
+                                                                *ngIf="!q.responses[2].correct"> {{q.responses[2].correct}}
+                                                            </span>
+                                                            <span style="color: green; font-weight: bold;"
+                                                                *ngIf="q.responses[2].correct"> {{q.responses[2].correct}}
+                                                            </span>
+                                                        </tr>
+                                                        <br>
+                                                    </td>
+                                                    <td class="text-center">
+                                                        <a (click)="Edit(q.idQuestion)"><u
+                                                                style="font-weight: bold;">Edit</u></a>
+                                                        <br><br><br>
+                                                        <a (click)="Delete(q.idQuestion)"><u
+                                                                style="font-weight: bold;">Delete</u></a>
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="mt-8 py-5 d-flex justify-content-center align-items-center">
+                <div class="text-center">
+                    <pagination-controls (pageChange)="p = $event"></pagination-controls>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

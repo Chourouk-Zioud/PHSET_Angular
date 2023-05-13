@@ -1,0 +1,139 @@
+<app-nav-bar-back></app-nav-bar-back>
+<div class="container-scroller">
+  <nav class="sidebar sidebar-offcanvas" id="sidebar">
+    <ul class="nav">
+      <li class="nav-item nav-profile border-bottom">
+        <a href="#" class="nav-link flex-column">
+          <div class="nav-profile-image">
+            <img src="../../../assets/Back/images/faces/face1.jpg" alt="profile" />
+            <!--change to offline or busy as needed-->
+          </div>
+          <div class="nav-profile-text d-flex ml-0 mb-3 flex-column">
+            <span class="font-weight-semibold mb-1 mt-2 text-center">Antonio Olson</span>
+            <span class="text-secondary icon-sm text-center">$3499.00</span>
+          </div>
+        </a>
+      </li>
+      
+      <li class="pt-2 pb-1">
+        <span class="nav-item-head">Menu</span>
+      </li>
+      
+      <li class="nav-item">
+        <a class="nav-link" routerLink="/claimlist">
+          <i class="mdi mdi-format-list-bulleted menu-icon"></i>
+          <span class="menu-title">Claim list</span>
+        </a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" routerLink="/claimstatics">
+          <i class="mdi mdi-chart-bar menu-icon"></i>
+          <span class="menu-title">Claim statics</span>
+        </a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" routerLink="/delib">
+          <i class="mdi mdi-email-outline menu-icon"></i>
+          <span class="menu-title">Deliberation notes</span>
+        </a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" routerLink="/listevalint">
+          <i class="mdi mdi-format-line-weight menu-icon"></i>
+          <span class="menu-title">Interview list</span>
+        </a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" routerLink="/evalcalander">
+          <i class="mdi mdi-calendar menu-icon"></i>
+          <span class="menu-title">Calender of Interviews</span>
+        </a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" routerLink="/listquestions">
+          <i class="mdi mdi mdi-comment-question-outline menu-icon"></i>
+          <span class="menu-title">List of questions</span>
+        </a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" routerLink="/viewevaluations">
+          <i class="mdi mdi mdi mdi-contrast-box menu-icon"></i>
+          <span class="menu-title">List of evaluations</span>
+        </a>
+      </li>
+    </ul>
+  </nav>
+
+    <div class="main-panel">
+        <div class="content-wrapper">
+            <div class="row">
+                <div class="col-lg-12 grid-margin stretch-card">
+                    <div class="card">
+                        <div class="card-body">
+                            <div class="col-lg-10">
+                                <div class="table-responsive">
+                                    <table class="table table-striped">
+                                        <thead>
+                                            <tr>
+                                                <th class="ps-2">
+                                                    <h6 class="font-weight-bolder text-center text-darker mb-0">
+                                                        Interview</h6>
+                                                </th>
+                                                <th class="ps-2">
+                                                    <h6 class="font-weight-bolder text-center text-darker mb-0">Date
+                                                    </h6>
+                                                </th>
+                                                <th class="ps-2">
+                                                    <h6 class="font-weight-bolder text-center text-darker mb-0">Condidat
+                                                    </h6>
+                                                </th>
+                                                <th class="ps-2">
+                                                    <h6 class="font-weight-bolder text-center text-darker mb-0">
+                                                        Evaluators list</h6>
+                                                </th>
+                                                <th class="ps-2">
+                                                    <h6 class="font-weight-bolder text-center text-darker mb-0">View
+                                                        grid</h6>
+                                                </th>
+                                            </tr>
+                                        </thead>
+                                        <tbody class="text-center">
+                                            <ng-container *ngFor="let i of interviews">
+                                                <tr>
+                                                    <td class="px-3">
+                                                        <p>{{ i.typeInterview }}</p>
+                                                    </td>
+                                                    <td class="px-3">
+                                                        <p>{{ i.dateInterview | date: 'dd/MM/yyyy HH:mm' }}</p>
+                                                    </td>
+                                                    <td class="px-3">
+                                                        <p>{{ i.condidat.firstName }} {{i.condidat.lastName}}</p>
+                                                    </td>
+                                                    <td>
+                                                        <ng-container *ngFor="let e of i.jury">
+                                                            <p>{{ e.firstName }} {{e.lastName}}</p>
+                                                        </ng-container>
+                                                    </td>
+                                                    <td >
+                                                        <a *ngIf="i.gridEvaluation.idGrid!=null" class="text-sm mb-0" type="button"
+                                                            (click)="goToGrid(i.gridEvaluation.idGrid)">View grid</a>
+                                                            <i *ngIf="i.gridEvaluation.idGrid==null" class="mdi mdi-alert-circle">View grid</i>
+                                                    </td>
+                                                </tr>
+                                            </ng-container>
+                                        </tbody>
+
+                                    </table>
+                                </div>
+                            </div>
+
+
+
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

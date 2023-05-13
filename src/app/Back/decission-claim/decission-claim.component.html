@@ -1,0 +1,148 @@
+<app-nav-bar-back></app-nav-bar-back>
+<div class="container-scroller">
+  <nav class="sidebar sidebar-offcanvas" id="sidebar">
+    <ul class="nav">
+      <li class="nav-item nav-profile border-bottom">
+        <a href="#" class="nav-link flex-column">
+          <div class="nav-profile-image">
+            <img src="../../../assets/Back/images/faces/face1.jpg" alt="profile" />
+            <!--change to offline or busy as needed-->
+          </div>
+          <div class="nav-profile-text d-flex ml-0 mb-3 flex-column">
+            <span class="font-weight-semibold mb-1 mt-2 text-center">Antonio Olson</span>
+            <span class="text-secondary icon-sm text-center">$3499.00</span>
+          </div>
+        </a>
+      </li>
+      
+      <li class="pt-2 pb-1">
+        <span class="nav-item-head">Menu</span>
+      </li>
+      
+      <li class="nav-item">
+        <a class="nav-link" routerLink="/claimlist">
+          <i class="mdi mdi-format-list-bulleted menu-icon"></i>
+          <span class="menu-title">Claim list</span>
+        </a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" routerLink="/claimstatics">
+          <i class="mdi mdi-chart-bar menu-icon"></i>
+          <span class="menu-title">Claim statics</span>
+        </a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" routerLink="/delib">
+          <i class="mdi mdi-email-outline menu-icon"></i>
+          <span class="menu-title">Deliberation notes</span>
+        </a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" routerLink="/listevalint">
+          <i class="mdi mdi-format-line-weight menu-icon"></i>
+          <span class="menu-title">Interview list</span>
+        </a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" routerLink="/evalcalander">
+          <i class="mdi mdi-calendar menu-icon"></i>
+          <span class="menu-title">Calender of Interviews</span>
+        </a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" routerLink="/listquestions">
+          <i class="mdi mdi mdi-comment-question-outline menu-icon"></i>
+          <span class="menu-title">List of questions</span>
+        </a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" routerLink="/viewevaluations">
+          <i class="mdi mdi mdi mdi-contrast-box menu-icon"></i>
+          <span class="menu-title">List of evaluations</span>
+        </a>
+      </li>
+    </ul>
+  </nav>
+
+    <div class="main-panel">
+        <div class="content-wrapper">
+            <div class="row">
+                <div class="col-lg-12 grid-margin stretch-card">
+                    <div class="card-body">
+                        <div class="row">
+                            <div class="col-md-6 grid-margin stretch-card">
+                                <div class="card">
+                                    <div class="card-body">
+                                        <h3 style="text-align: center; color: #990100;">Claim details</h3>
+                                        <br>
+                                        <br>
+                                        <table class="table">
+                                            <tbody>
+                                                <tr>
+                                                    <td style="font-weight: bold;">Claim object</td>
+                                                    <td>{{claim.object}}</td>
+                                                </tr>
+                                                <tr>
+                                                    <td style="font-weight: bold; word-wrap: break-word;">Claim
+                                                        content</td>
+                                                    <td style=" word-wrap: break-word;"><label>{{claim.content}}</label>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td style="font-weight: bold;">Claim date</td>
+                                                    <td>{{ claim.dateClaim | date: 'dd/MM/yyyy HH:mm' }}</td>
+                                                </tr>
+                                                <tr>
+                                                    <td style="font-weight: bold;">User</td>
+                                                    <td style=" word-wrap: break-word;"><label>{{user.lastName}}
+                                                            {{user.firstName}}</label>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td style="font-weight: bold;">Decission</td>
+                                                    <td>
+                                                        <div class="col-sm-9">
+                                                            <textarea type="text" class="form-control"
+                                                                style="width: 27em;" placeholder="Decission"  [(ngModel)]="decission.decission"></textarea>
+                                                        </div>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td style="font-weight: bold;">Etat decission</td>
+                                                    <td>
+                                                        <div class="col-sm-9">
+                                                            <select class="form-control" style="width: 27em;"
+                                                                [(ngModel)]="etatt">
+                                                                <option value="Traited">Traited</option>
+                                                                <option value="Refused">Refused</option>
+                                                            </select>
+                                                        </div>
+                                                    </td>
+                                                </tr>
+                                                <br>
+                                            </tbody>
+                                        </table>
+                                        <button type="submit" class="btn btn-primary mr-2" (click)="onSubmit()"> Confirm
+                                        </button>
+                                        <button class="btn btn-light" (click)="cancel()">Cancel</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6 grid-margin stretch-card">
+                                <div class="card">
+                                    <div class="card-body">
+                                        <h3 style="text-align: center; color: #990100;">Claim image</h3>
+                                        <form class="forms-sample">
+                                            <img src="data:image/png;base64,{{claim.image}}" width="500px"
+                                                height="400px">
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

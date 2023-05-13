@@ -1,0 +1,185 @@
+<app-nav-bar-back></app-nav-bar-back>
+<div class="container-scroller">
+  <nav class="sidebar sidebar-offcanvas" id="sidebar">
+    <ul class="nav">
+      <li class="nav-item nav-profile border-bottom">
+        <a href="#" class="nav-link flex-column">
+          <div class="nav-profile-image">
+            <img src="../../../assets/Back/images/faces/face1.jpg" alt="profile" />
+            <!--change to offline or busy as needed-->
+          </div>
+          <div class="nav-profile-text d-flex ml-0 mb-3 flex-column">
+            <span class="font-weight-semibold mb-1 mt-2 text-center">Antonio Olson</span>
+            <span class="text-secondary icon-sm text-center">$3499.00</span>
+          </div>
+        </a>
+      </li>
+      
+      <li class="pt-2 pb-1">
+        <span class="nav-item-head">Menu</span>
+      </li>
+      
+      <li class="nav-item">
+        <a class="nav-link" routerLink="/claimlist">
+          <i class="mdi mdi-format-list-bulleted menu-icon"></i>
+          <span class="menu-title">Claim list</span>
+        </a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" routerLink="/claimstatics">
+          <i class="mdi mdi-chart-bar menu-icon"></i>
+          <span class="menu-title">Claim statics</span>
+        </a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" routerLink="/delib">
+          <i class="mdi mdi-email-outline menu-icon"></i>
+          <span class="menu-title">Deliberation notes</span>
+        </a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" routerLink="/listevalint">
+          <i class="mdi mdi-format-line-weight menu-icon"></i>
+          <span class="menu-title">Interview list</span>
+        </a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" routerLink="/evalcalander">
+          <i class="mdi mdi-calendar menu-icon"></i>
+          <span class="menu-title">Calender of Interviews</span>
+        </a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" routerLink="/listquestions">
+          <i class="mdi mdi mdi-comment-question-outline menu-icon"></i>
+          <span class="menu-title">List of questions</span>
+        </a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" routerLink="/viewevaluations">
+          <i class="mdi mdi mdi mdi-contrast-box menu-icon"></i>
+          <span class="menu-title">List of evaluations</span>
+        </a>
+      </li>
+    </ul>
+  </nav>
+
+
+
+
+  <div class="main-panel">
+    <div class="content-wrapper">
+      <div class="page-header">
+        <h3 class="page-title">Add questions</h3>
+        <nav aria-label="breadcrumb">
+          <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a routerLink="/listquestions">List questions</a></li>
+            <li class="breadcrumb-item active" aria-current="page"> Update questions </li>
+          </ol>
+        </nav>
+      </div>
+      <div class="col-12 grid-margin stretch-card">
+        <div class="card">
+          <div class="card-body">
+            <h4 class="card-title">Add new questions</h4>
+            <p class="card-description">Fill in all the boxes</p>
+            <form class="forms-sample" #f="ngForm">
+              <div class="form-group">
+                <label for="exampleSelectGender">Type question</label>
+                <select class="form-control" id="exampleSelectGender" name="typeTest" [(ngModel)]="question.typeTest">
+                  <option value="Language_Skills">Language skills</option>
+                  <option value="General_Culture">General culture</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label for="exampleInputName1">Question</label>
+                <input type="text" class="form-control" id="exampleInputName1" name="nameQuestion" placeholder="Name"
+                  [(ngModel)]="question.nameQuestion" />
+              </div>
+              <div class="form-group">
+                <label for="exampleSelectGender">Question level</label>
+                <select class="form-control" id="exampleSelectGender" name="questionLevel"
+                  [(ngModel)]="question.questionLevel">
+                  <option value="Easy">Easy</option>
+                  <option value="Medium">Medium</option>
+                  <option value="Hard">Hard</option>
+                </select>
+              </div>
+              <div class="row">
+                <div class="col-md-6">
+                  <div class="form-group row">
+                    <label class="col-sm-3 col-form-label">First response</label>
+                    <div class="col-sm-9">
+                      <input type="text" class="form-control" name="response0" [(ngModel)]="question.responses[0].response" />
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="form-group row">
+                    <label class="col-sm-3 col-form-label">Result</label>
+                    <div class="col-sm-9">
+                      <select class="form-control" id="exampleSelectGender" name="correct0"
+                        [(ngModel)]="question.responses[0].correct">
+                        <option value="true">Correct</option>
+                        <option value="false">False</option>
+                      </select>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-md-6">
+                  <div class="form-group row">
+                    <label class="col-sm-3 col-form-label">First response</label>
+                    <div class="col-sm-9">
+                      <input type="text" class="form-control" name="response1" [(ngModel)]="question.responses[1].response" />
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="form-group row">
+                    <label class="col-sm-3 col-form-label">Result</label>
+                    <div class="col-sm-9">
+                      <select class="form-control" id="exampleSelectGender" name="correct1"
+                        [(ngModel)]="question.responses[1].correct">
+                        <option value="true">Correct</option>
+                        <option value="false">False</option>
+                      </select>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-md-6">
+                  <div class="form-group row">
+                    <label class="col-sm-3 col-form-label">First response</label>
+                    <div class="col-sm-9">
+                      <input type="text" class="form-control" name="response2" [(ngModel)]="question.responses[2].response" />
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="form-group row">
+                    <label class="col-sm-3 col-form-label">Result</label>
+                    <div class="col-sm-9">
+                      <select class="form-control" id="exampleSelectGender" name="correct2"
+                        [(ngModel)]="question.responses[2].correct">
+                        <option value="true">Correct</option>
+                        <option value="false">False</option>
+                      </select>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <button type="submit" class="btn btn-primary mr-2" (click)="onSubmit()"> Submit </button>
+              <button class="btn btn-light">Cancel</button>
+            </form>
+          </div>
+        </div>
+
+
+      </div>
+    </div>
+  </div>
+</div>
