@@ -1,0 +1,120 @@
+<app-nav-bar-front></app-nav-bar-front>
+
+<header class="header-2">
+    <div class="page-header min-vh-75 relative" style="background-image: url('../../../assets/Front/img/curved-images/curve.png')">
+      <div class="container">
+        <br><br><br><br>
+        <div class="row">
+          <div class="text-center mx-auto">
+            <h1 class="text-center pt-3 mt-n5" style="font-family: fantasy;">École supérieure privée d'ingénierie et de technologie </h1>
+          </div>
+        </div>
+      </div>
+  
+      <div class="position-absolute w-100 z-index-1 bottom-0">
+        <svg class="waves" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 24 150 40" preserveAspectRatio="none" shape-rendering="auto">
+          <defs>
+            <path id="gentle-wave" d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z" />
+          </defs>
+          <g class="moving-waves">
+            <use xlink:href="#gentle-wave" x="48" y="-1" fill="rgba(255,255,255,0.40" />
+            <use xlink:href="#gentle-wave" x="48" y="3" fill="rgba(255,255,255,0.35)" />
+            <use xlink:href="#gentle-wave" x="48" y="5" fill="rgba(255,255,255,0.25)" />
+            <use xlink:href="#gentle-wave" x="48" y="8" fill="rgba(255,255,255,0.20)" />
+            <use xlink:href="#gentle-wave" x="48" y="13" fill="rgba(255,255,255,0.15)" />
+            <use xlink:href="#gentle-wave" x="48" y="16" fill="rgba(255,255,255,0.95" />
+          </g>
+        </svg>
+      </div>
+    </div>
+</header>
+   
+<div class="region region-content">
+    <div id="block-hotblocks-1" class="block block-hotblocks">
+        <div class="content">
+            <div class="hotblock">
+                
+                <app-top-training></app-top-training>
+
+<!------------------------------------------------------------------>
+    
+    <div id="hotblocks_item-248" class="hotblocks_item hid-248 hotblocks-item boite-video">
+      <div class="boiteVideo Blanc vertical">
+        <div class="container-fluid">
+          <div class="video-bg">
+            <div class="row -vertical">
+              <div class="col-md-12">
+                  <h2 class="avec-barres">
+                      <span>Our Courses Offered</span>
+                  </h2>
+              </div>
+              <div class="col-md-12">
+                <div class="row">
+                  <div class="col-lg-6 col-12 mt-4" *ngFor="let c of ListeCours,let i=index">
+                    <app-course-item [course]="c" (viewChapters)="viewChapters($event)"></app-course-item>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+<!------------------------------------------------------------------>
+                <app-exam></app-exam>
+                <app-other-training></app-other-training>
+                
+            </div>
+        </div>
+    </div>
+</div>
+
+
+  
+
+
+<!-- 
+<section class="pt-2 pb-6 bg-gray-100" id="count-stats">
+  <div class="container">
+    <div class="row mb-7">
+      <div class="col-lg-2 col-md-4 col-6 mb-4">
+        <img class="w-100 opacity-7" src="../img/logos/gray-logos/logo-coinbase.svg" alt="logo">
+      </div>
+      <div class="col-lg-2 col-md-4 col-6 mb-4">
+        <img class="w-100 opacity-7" src="../img/logos/gray-logos/logo-nasa.svg" alt="logo">
+      </div>
+      <div class="col-lg-2 col-md-4 col-6 mb-4">
+        <img class="w-100 opacity-7" src="../img/logos/gray-logos/logo-netflix.svg" alt="logo">
+      </div>
+      <div class="col-lg-2 col-md-4 col-6 mb-4">
+        <img class="w-100 opacity-7" src="../img/logos/gray-logos/logo-pinterest.svg" alt="logo">
+      </div>
+      <div class="col-lg-2 col-md-4 col-6 mb-4">
+        <img class="w-100 opacity-7" src="../img/logos/gray-logos/logo-spotify.svg" alt="logo">
+      </div>
+      <div class="col-lg-2 col-md-4 col-6 mb-4">
+        <img class="w-100 opacity-7" src="../img/logos/gray-logos/logo-vodafone.svg" alt="logo">
+      </div>
+    </div>
+    <div class="row justify-content-center text-center">
+      <div class="col-md-3">
+        <h1 class="text-gradient text-info" id="state1" countTo="5234">0</h1>
+        <h5>Projects</h5>
+        <p>Of “high-performing” level are led by a certified project manager</p>
+      </div>
+      <div class="col-md-3">
+        <h1 class="text-gradient text-info"><span id="state2" countTo="3400">0</span>+</h1>
+        <h5>Hours</h5>
+        <p>That meets quality standards required by our users</p>
+      </div>
+      <div class="col-md-3">
+        <h1 class="text-gradient text-info"><span id="state3" countTo="24">0</span>/7</h1>
+        <h5>Support</h5>
+        <p>Actively engage team members that finishes on time</p>
+      </div>
+    </div>
+  </div>
+</section> -->
+
+<app-footer></app-footer>

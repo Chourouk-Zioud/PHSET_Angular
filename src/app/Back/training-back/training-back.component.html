@@ -1,0 +1,95 @@
+<head>
+    <link rel="stylesheet" href="/assets/Back/vendors/mdi/css/materialdesignicons.min.css">
+    <link rel="stylesheet" href="/assets/Back/vendors/flag-icon-css/css/flag-icon.min.css">
+    <link rel="stylesheet" href="/assets/Back/vendors/css/vendor.bundle.base.css">
+    <link rel="stylesheet" href="/assets/Back/vendors/jquery-bar-rating/css-stars.css" />
+    <link rel="stylesheet" href="/assets/Back/vendors/font-awesome/css/font-awesome.min.css" />
+    <link rel="stylesheet" href="/assets/Back/css/demo_1/style.css" />
+    <link rel="shortcut icon" href="/assets/Back/images/favicon.png" />
+</head>
+
+<div class="container-scroller">
+    <!-- partial:partials/_sidebar.html -->
+    <nav class="sidebar sidebar-offcanvas" id="sidebar">
+        <ul class="nav">
+            <app-home-back></app-home-back>
+        </ul>
+    </nav>
+    <nav class="navbar default-layout-navbar col-lg-12 col-12 p-0 fixed-top d-flex flex-row">
+        <div class="navbar-menu-wrapper d-flex align-items-stretch">
+            <button class="navbar-toggler navbar-toggler align-self-center" type="button" data-toggle="minimize">
+                <span class="mdi mdi-chevron-double-left"></span>
+            </button>
+            <div class="text-center navbar-brand-wrapper d-flex align-items-center justify-content-center">
+                <a class="navbar-brand brand-logo-mini" href="index.html"><img src="../images/logo-mini.svg"
+                        alt="logo" /></a>
+            </div>
+            <button class="navbar-toggler navbar-toggler-right d-lg-none align-self-center" type="button"
+                data-toggle="offcanvas">
+                <span class="mdi mdi-menu"></span>
+            </button>
+        </div>
+    </nav>
+        <!-- partial -->
+        <div class="main-panel">
+            <div class="content-wrapper"><br><br><br>
+                <div class="row">
+                    <div class="col-lg-12 grid-margin stretch-card">
+                        <div class="card">
+                            <div class="card-body">
+                                <h4 class="card-title">List of trainings</h4>
+                                <div class="table-responsive">
+                                    <table class="table table-striped">
+                                        <thead>
+                                            <tr>
+                                                <th>ID</th>
+                                                <th>TITLE</th>
+                                                <th>DESCRIPTION</th>
+                                                <th>DURATION</th>
+                                                <th>SUBJECT</th>
+                                                <th>LEVEL</th>
+                                                <th>STATE</th>
+                                                <th>TYPE</th>
+                                                <th>PRICE</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody >
+                                            <tr *ngFor="let t of ListTraining,let i=index">
+                                                <td class="py-3">
+                                                    {{ t.idTraining }}
+                                                </td>
+                                                <td class="py-3">
+                                                    {{ t.titleTraining }}
+                                                </td>
+                                                <td class="py-3">
+                                                    {{ t.descriptionTraining }}
+                                                </td>
+                                                <td class="py-3">
+                                                    {{ t.durationTraining }}
+                                                </td>
+                                                <td class="py-3">
+                                                    {{ t.subjectTraining }}
+                                                </td>
+                                                <td class="py-3">
+                                                    {{ t.levelTraining }}
+                                                </td>
+                                                <td class="py-3">
+                                                    {{ t.stateTraining }}
+                                                </td>
+                                                <td class="py-3">
+                                                    {{ t.typeTraining }}
+                                                </td>
+                                                <td class="py-3">
+                                                    {{ t.priceTraining }}
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+</div>

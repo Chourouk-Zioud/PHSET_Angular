@@ -1,0 +1,118 @@
+
+  <!-- <div *ngFor="let chapter of chapters,let p=index">
+    <div class="card bg-white text-white" style="height: 500px;width: 500px;">
+      <div class="card-img-overlay">
+        <h5 class="card-title" style="color: red;">ID : {{ chapter.idChapter}}</h5>
+        <h5 class="card-title" style="color: red;">nameChapter : {{ chapter.nameChapter}}</h5>
+        <h5 class="card-title" style="color: red;">descriptionChapter : {{ chapter.descriptionChapter}}</h5>
+      </div>
+    </div>
+  </div> -->
+
+
+  <app-nav-bar-front></app-nav-bar-front>
+
+<header class="header-2">
+    <div class="page-header min-vh-75 relative" style="background-image: url('../../../assets/Front/img/curved-images/curve.png')">
+      <div class="container">
+        <br><br><br><br>
+        <div class="row">
+          <div class="text-center mx-auto">
+            <h1 class="text-center pt-3 mt-n5" style="font-family: fantasy;">École supérieure privée d'ingénierie et de technologie </h1>
+          </div>
+        </div>
+      </div>
+  
+      <div class="position-absolute w-100 z-index-1 bottom-0">
+        <svg class="waves" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 24 150 40" preserveAspectRatio="none" shape-rendering="auto">
+          <defs>
+            <path id="gentle-wave" d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z" />
+          </defs>
+          <g class="moving-waves">
+            <use xlink:href="#gentle-wave" x="48" y="-1" fill="rgba(255,255,255,0.40" />
+            <use xlink:href="#gentle-wave" x="48" y="3" fill="rgba(255,255,255,0.35)" />
+            <use xlink:href="#gentle-wave" x="48" y="5" fill="rgba(255,255,255,0.25)" />
+            <use xlink:href="#gentle-wave" x="48" y="8" fill="rgba(255,255,255,0.20)" />
+            <use xlink:href="#gentle-wave" x="48" y="13" fill="rgba(255,255,255,0.15)" />
+            <use xlink:href="#gentle-wave" x="48" y="16" fill="rgba(255,255,255,0.95" />
+          </g>
+        </svg>
+      </div>
+    </div>
+</header>
+   
+<div class="region region-content">
+    <div id="block-hotblocks-1" class="block block-hotblocks">
+        <div class="content">
+            <div class="hotblock">
+                
+
+<!------------------------------------------------------------------>
+    
+    <div id="hotblocks_item-248" class="hotblocks_item hid-248 hotblocks-item boite-video">
+      <div class="boiteVideo Blanc vertical">
+        <div class="container-fluid">
+          <div class="video-bg">
+            <div class="row -vertical">
+                <div class="col-md-12">
+                  <h2 class="avec-barres">
+                      <span>Les Chapitres :</span>
+                  </h2>
+                </div>
+                <div class="row">
+                <div class="col-12 mx-auto">
+                <div class="row py-lg-7 py-5" *ngFor="let c of chapters,let i=index">
+                    <div class="col-lg-3 col-md-5 position-relative my-auto">
+                        <img class="img border-radius-lg max-width-200 w-100 position-relative z-index-2" src="../../../../assets/Front/img/Chapter.jpg" alt="bruce">
+                    </div>
+                    <div class="col-lg-7 col-md-7 z-index-2 position-relative px-md-2 px-sm-5 mt-sm-0 mt-4">
+                        <div class="d-flex justify-content-between align-items-center mb-2">
+                            <h4 class="mb-0">{{ c.nameChapter }}</h4>
+                            <div class="d-block">
+                                <a type="button" [routerLink]="['/chapterItem',c.idChapter]" class="btn btn-sm btn-outline-info text-nowrap mb-0">Open</a>
+                            </div>
+                        </div>
+                        <div>
+                        <p class="text-lg mb-0" style="float: left; text-align: left;">{{ c.descriptionChapter }}</p>
+                        </div>
+                        <div class="row mb-4">
+                            <div class="col-auto">
+                            <span class="h6">323</span>
+                            <span>Posts</span>
+                            </div>
+                            <div class="col-auto">
+                            <span class="h6">3.5k</span>
+                            <span>Followers</span>
+                            </div>
+                            <div class="col-auto">
+                            <span class="h6">260</span>
+                            <span>Following</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                </div>
+                </div>
+
+    
+
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+<!------------------------------------------------------------------>
+                <app-exam></app-exam>
+                <app-other-training></app-other-training>
+                
+            </div>
+        </div>
+    </div>
+</div>
+
+
+  
+
+<app-footer></app-footer>

@@ -1,0 +1,149 @@
+
+<!-- <div class="page-header min-vh-85">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-8 d-flex justify-content-center flex-column mx-auto">
+            <div class="card d-flex blur justify-content-center p-4 shadow-lg my-sm-0 my-sm-6 mt-8 mb-5">
+              <div class="text-center">
+                <h3 class="text-gradient text-primary">Add Training</h3>
+                <p class="mb-0">
+                  text here
+                </p>
+              </div>
+              <form (ngSubmit)="onSubmit()" #f="ngForm">
+                <div class="card-body pb-2">
+                  <div class="row">
+                    <div class="col-md-6">
+                      <label>Training Title</label>
+                      <div class="input-group mb-4">
+                        <input class="form-control" placeholder="Title" aria-label="titleTraining" name="titleTraining" type="text" [(ngModel)]="training.titleTraining" required #id="ngModel">
+                      </div>
+                    </div>
+                    <div class="col-md-6 ps-md-2">
+                      <label>Training Price</label>
+                      <div class="input-group">
+                        <input type="number" class="form-control" name="priceTraining" placeholder="Price" [(ngModel)]="training.priceTraining" required #id="ngModel">
+                      </div>
+                    </div>
+                  </div> -->
+                  <!-- <div class="form-group mb-0 mt-md-0 mt-4">
+                    <label>How can we help you?</label>
+                    <textarea name="message" class="form-control" id="message" rows="6" placeholder="Describe your problem in at least 250 characters"></textarea>
+                  </div> -->
+                  <!-- <div class="row">
+                    <div class="col-md-12 text-center">
+                      <button type="submit" class="btn bg-gradient-primary mt-3 mb-0">Save</button>
+                    </div>
+                  </div>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+</div> -->
+
+
+<app-nav-bar-front></app-nav-bar-front>
+
+<header class="header-2">
+    <div class="page-header min-vh-75 relative" style="background-image: url('../../../assets/Front/img/curved-images/curve.png')">
+      <div class="container">
+        <br><br><br><br>
+        <div class="row">
+          <div class="text-center mx-auto">
+            <h1 class="text-center pt-3 mt-n5" style="font-family: fantasy;">École supérieure privée d'ingénierie et de technologie </h1>
+          </div>
+        </div>
+      </div>
+  
+      <div class="position-absolute w-100 z-index-1 bottom-0">
+        <svg class="waves" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 24 150 40" preserveAspectRatio="none" shape-rendering="auto">
+          <defs>
+            <path id="gentle-wave" d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z" />
+          </defs>
+          <g class="moving-waves">
+            <use xlink:href="#gentle-wave" x="48" y="-1" fill="rgba(255,255,255,0.40" />
+            <use xlink:href="#gentle-wave" x="48" y="3" fill="rgba(255,255,255,0.35)" />
+            <use xlink:href="#gentle-wave" x="48" y="5" fill="rgba(255,255,255,0.25)" />
+            <use xlink:href="#gentle-wave" x="48" y="8" fill="rgba(255,255,255,0.20)" />
+            <use xlink:href="#gentle-wave" x="48" y="13" fill="rgba(255,255,255,0.15)" />
+            <use xlink:href="#gentle-wave" x="48" y="16" fill="rgba(255,255,255,0.95" />
+          </g>
+        </svg>
+      </div>
+    </div>
+</header>
+   
+<div class="region region-content">
+    <div id="block-hotblocks-1" class="block block-hotblocks">
+        <div class="content">
+            <div class="hotblock">
+                
+                <app-top-training></app-top-training>
+<!------------------------------------------------------------------>
+
+  <div id="hotblocks_item-248" class="hotblocks_item hid-248 hotblocks-item boite-video">
+    <div class="boiteVideo Blanc vertical">
+      <div class="container-fluid">
+        <div class="video-bg">
+          <div class="row -vertical">
+            <div class="col-md-12">
+                <h2 class="avec-barres">
+                    <span>Demande de formation</span>
+                </h2>
+            </div>
+
+<!---------------------------------------------------------------->
+
+              <form #f="ngForm">
+                <div class="card-body pb-2">
+                  <div class="row">
+                    <div class="col-md-6">
+                      <label>Training Option</label>
+                      <div class="input-group mb-4">
+                        <input class="form-control" placeholder="Title" aria-label="titleTraining" name="titleTraining" type="text" [(ngModel)]="training.titleTraining" required #titleTraining="ngModel">
+                      </div>
+                      <div class="alert alert-danger" style="color: white;" *ngIf="titleTraining.invalid && titleTraining.touched"> Id required !!!</div>
+                    </div>
+                    <div class="col-md-6 ps-md-2">
+                      <label>Training Speciality</label>
+                      <div class="input-group">
+                        <input type="number" class="form-control" name="priceTraining" placeholder="Price" [(ngModel)]="training.priceTraining" required #priceTraining="ngModel">
+                      </div>
+                      <div class="alert alert-danger" style="color: white;" *ngIf="priceTraining.invalid && priceTraining.touched"> Id required !!!</div>
+
+                    </div>
+                  </div>
+                  <!-- <div class="form-group mb-0 mt-md-0 mt-4">
+                    <label>How can we help you?</label>
+                    <textarea name="message" class="form-control" id="message" rows="6" placeholder="Describe your problem in at least 250 characters"></textarea>
+                  </div> -->
+                  <div class="row">
+                    <div class="col-md-12 text-center">
+                      <button type="submit" class="btn bg-gradient-primary mt-3 mb-0" (click)="onSubmit()">Save</button>
+                    </div>
+                  </div>
+                </div>
+              </form>
+
+
+<!---------------------------------------------------------------->
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+<!------------------------------------------------------------------>
+                
+                <app-other-training></app-other-training>
+                
+            </div>
+        </div>
+    </div>
+</div>
+
+
+  <app-footer></app-footer>
