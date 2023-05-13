@@ -1,0 +1,86 @@
+<app-nav-bar></app-nav-bar>
+
+<section class="pt-5">
+  <div class="container text-center">
+    <div class="row justify-content-center">
+      <div class="col-12 text-center">
+        <h2 class="text-gradient text-danger text-center">My Interviews</h2>
+        <p class="lead mb-5">you will find here the list of your interviews</p>
+      </div>
+      <div class="col-lg-10">
+        <div class="table-responsive">
+          <table class="table table-pricing" border="5" *ngFor="let i of ListInterview">
+            <thead class="text-light">
+              <tr>
+                <th class="ps-2">
+                  <h6 class="mb-0">Details</h6>
+                </th>
+                <th class="text-center">
+                  <h6 class="font-weight-bold" >Informations</h6>
+                </th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td class="py-3">
+                  <span class="text-xs">Reference</span>
+                </td>
+                <td class="text-center py-3">
+                  <i class="fas fa-check text-xs"style="color: black;">{{ i.refInterview }}</i>
+                </td>
+              </tr>
+              <tr>
+                <td class="py-3">
+                  <span class="text-xs">dateInterview</span>
+                </td>
+                <td class="text-center py-3">
+                  <i class="fas fa-check text-xs"style="color: black;">{{ i.dateInterview }}</i>
+                </td>
+              </tr>
+              <tr>
+                <td class="py-3">
+                  <span class="text-xs">finInterview</span>
+                </td>
+                <td class="text-center py-3">
+                  <i class="fas fa-check text-xs"style="color: black;">{{ i.finInterview }}</i>
+                </td>
+              </tr>
+              <tr>
+                <td class="py-3">
+                  <span class="text-xs">etatInterview</span>
+                </td>
+                <td class="text-center py-3">
+                  <i class="fas fa-check text-xs"style="color: black;">{{ i.etatInterview }}</i>
+                </td>
+              </tr>
+              <tr>
+                <td class="py-3">
+                  <span class="text-xs">stateInterview</span>
+                </td>
+                <td class="text-center py-3">
+                  <i class="fas fa-check text-xs"style="color: black;">{{ i.stateInterview }}</i>
+                </td>
+              </tr>
+              <tr>
+                <td class="py-3">
+                  <span class="text-xs">noteFinal</span>
+                </td>
+                <td class="text-center py-3">
+                  <i class="fas fa-check text-xs"style="color: black;">{{ i.noteFinal }}</i>
+                </td>
+              </tr>
+              <tr>
+                <td class="py-3">
+                  <span class="text-xs">typeInterview</span>
+                </td>
+                <td class="text-center py-3">
+                  <i class="fas fa-check text-xs"style="color: black;">{{ i.typeInterview }}</i>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

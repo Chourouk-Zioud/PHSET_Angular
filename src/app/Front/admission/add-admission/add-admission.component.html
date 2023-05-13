@@ -1,0 +1,465 @@
+<app-nav-bar></app-nav-bar>
+
+<div class="page-header min-vh-85">
+  <div>
+    <img
+      class="position-absolute fixed-top ms-auto w-50 h-100 z-index-0 d-none d-sm-none d-md-block border-radius-section border-top-end-radius-0 border-top-start-radius-0 border-bottom-end-radius-0"
+      src="../assets/Front/img/curved-images/inscription etranger.jpg" alt="image">
+  </div>
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-15 d-flex justify-content-center flex-column">
+        <div class="card d-flex blur justify-content-center p-4 shadow-lg my-sm-0 my-sm-6 mt-8 mb-5">
+          <div class="text-center">
+            <h3 style="color: red;">INFORMATIONS PERSONNELLES</h3>
+          </div>
+
+          <form #f="ngForm">
+            <div class="card-body pb-2">
+              <div class="row">
+                
+                  <div class="col-md-6">
+                    <label for="nom">Nom :</label>
+                    <div class="input-group mb-4">
+                      <input class="form-control" placeholder="Nom" aria-label="Nom" type="text" id="nom" name="nom"
+                        [(ngModel)]="inscription.user.firstName" required minlength="3">
+                    </div>
+                  </div>
+                  <div class="col-md-6">
+                    <label>Prénom</label>
+                    <div class="input-group mb-4">
+                      <input class="form-control" placeholder="prenom" aria-label="prenom" type="text" name="prenom"
+                        [(ngModel)]="inscription.user.lastName">
+                    </div>
+                  </div>
+                  <div class="col-md-6 ps-md-2">
+                    <label>Email</label>
+                    <div class="input-group">
+                      <input type="email" id="email" name="email" class="form-control" placeholder="flen@esprit.tn"
+                        [(ngModel)]="inscription.user.email" required pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$">
+                    </div>
+                  </div>
+                  <div class="col-md-6">
+                    <label>Civilité</label>
+                    <div class="form-check">
+                      <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1"
+                        checked>
+                      <label class="form-check-label" for="flexRadioDefault1">
+                        Mr
+                      </label>
+                    </div>
+                    <div class="form-check">
+                      <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2">
+                      <label class="form-check-label" for="flexRadioDefault2">
+                        Mme
+                      </label>
+                    </div>
+                    <div class="form-check">
+                      <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2">
+                      <label class="form-check-label" for="flexRadioDefault2">
+                        Mlle
+                      </label>
+                    </div>
+                  </div>
+                  <div class="col-md-6">
+
+                    <label>Date de naissance :</label>
+                    <input type="date" name="dob" [(ngModel)]="dateOfBirth" required pattern="\d{4}-\d{2}-\d{2}">
+
+                    <br>
+                    <label>Lieu de Naissance *</label>
+                    <input class="form-control" placeholder="Lieu de Naissance" aria-label="Lieu de Naissance"
+                      type="text" name="lieuNaissance" [(ngModel)]="inscription.user.LieudeNaissance" required>
+
+                  </div>
+                  <div class="col-md-6">
+                    <label>CIN</label>
+                    <div class="input-group mb-4">
+                      <input class="form-control" aria-label="CIN" type="text" name="cin" [(ngModel)]="inscription.user.cin"
+                        pattern="[0-9]{8}">
+                    </div>
+                  </div>
+                  <div class="col-md-6">
+                    <label>Gouvernorat</label>
+                    <div class="input-group mb-4">
+                      <select class="form-control" [(ngModel)]="inscription.user.Gouvernorat">
+                        <option value="Tunis"> Tunis</option>
+                        <option value="Ben Arous"> Ben Arous</option>
+                        <option value="Ariana"> Ariana</option>
+                        <option value="Manouba"> Manouba</option>
+                        <option value="Nabeul"> Nabeul</option>
+                        <option value="Zaghouan"> Zaghouan</option>
+                        <option value="Bizerte"> Bizerte</option>
+                        <option value="Béja"> Béja</option>
+                        <option value="Jendouba"> Jendouba</option>
+                        <option value="Le Kef"> Le Kef</option>
+                        <option value="Siliana"> Siliana</option>
+                        <option value="Kairouan"> Kairouan</option>
+                        <option value="Kasserine"> Kasserine</option>
+                        <option value="Sidi Bouzid"> Sidi Bouzid</option>
+                        <option value="Sousse"> Sousse</option>
+                        <option value="Monastir"> Monastir</option>
+                        <option value="Mahdia"> Mahdia</option>
+                        <option value="Sfax"> Sfax</option>
+                        <option value="Gabès"> Gabès</option>
+                        <option value="Medenine"> Medenine</option>
+                        <option value="Tataouine"> Tataouine</option>
+                        <option value="Tozeur"> Tozeur</option>
+                        <option value="Kebili"> Kebili</option>
+                        <option value="Etranger"> test </option>
+
+                      </select>
+                    </div>
+                  </div>
+                  <div class="col-md-6">
+                    <label>Num Téléphone</label>
+                    <div class="input-group mb-4">
+                      <input class="form-control" aria-label="Num Téléphone" [(ngModel)]="inscription.user.phone" type="text">
+                    </div>
+                  </div>
+                  <div class="col-md-6">
+                    <label>Diplôme du baccalauréat</label>
+                    <div class="form-check">
+                      <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+                      <label class="form-check-label" for="flexRadioDefault1">
+                        Déjà obtenu
+                      </label>
+                    </div>
+                    <div class="form-check">
+                      <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2"
+                        checked>
+                      <label class="form-check-label" for="flexRadioDefault2">
+                        En cours
+
+                      </label>
+                    </div>
+
+                  </div>
+                  <div>
+                    <div class="col-md-6 ">
+                      <label>Nature baccalauréat:</label>
+                    </div>
+                    <div class="col-md-6 col-12">
+                      <div class="form-group">
+                        <select class="form-control" required="">
+
+                          <option value="E">Bac Etranger</option>
+                          <option value="T" selected="selected">Bac Tunisien</option>
+
+                        </select>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-md-6 ">
+                    <label>Section:</label>
+                    <div class="form-group">
+                      <select class="form-control" required="">
+
+                        <option value="Mathematique">Mathematique</option>
+                        <option value="Technique" selected="selected">Technique</option>
+                        <option value="Sciences">Sciences</option>
+
+                      </select>
+                    </div>
+                  </div>
+                  <div class="col-md-6 ">
+                    <label>Année baccalauréat:</label>
+                    <div class="form-group">
+                      <select class="form-control" required="">
+                        <option selected="selected" value=""></option>
+                        <option value="1999">1999</option>
+                        <option value="2000">2000</option>
+                        <option value="2001">2001</option>
+                        <option value="2002">2002</option>
+                        <option value="2003">2003</option>
+                        <option value="2004">2004</option>
+                        <option value="2005">2005</option>
+                        <option value="2006">2006</option>
+                        <option value="2007">2007</option>
+                        <option value="2008">2008</option>
+                        <option value="2009">2009</option>
+                        <option value="2010">2010</option>
+                        <option value="2011">2011</option>
+                        <option value="2012">2012</option>
+                        <option value="2013">2013</option>
+                        <option value="2014">2014</option>
+                        <option value="2015">2015</option>
+                        <option value="2016">2016</option>
+                        <option value="2017">2017</option>
+                        <option value="2018">2018</option>
+                        <option value="2019">2019</option>
+                        <option value="2020">2020</option>
+                        <option value="2021">2021</option>
+                        <option value="2022">2022</option>
+                        <option value="2023">2023</option>
+
+                      </select>
+                    </div>
+                  </div>
+                  <div class="col-md-6">
+                    <label>Moyenne baccalauréat</label>
+                    <div class="input-group mb-4">
+                      <input class="form-control" placeholder="Moyenne baccalauréat " aria-label="Moyenne baccalauréat"
+                        type="text">
+                    </div>
+                  </div>
+                  <div class="col-md-6 ">
+                    <label>Etablissement du bac</label>
+                    <div class="form-group">
+                      <input type="text" class="form-control" placeholder="Etablissement du bac" required="">
+                    </div>
+                  </div>
+                  <div class="col-md-6 ">
+                    <div class="form-group">
+                      <label> Niveau d'études atteint:</label>
+                      <select id="ContentPlaceHolder1_DropDownList11" class="form-control" required="">
+                        <option selected="selected" value="">bac</option>
+                        <option value="">bac+3</option>
+                        <option value="">Master</option>
+                        <option value="">bac+2</option>
+                        <option value="">bac+5</option>
+
+                      </select>
+                    </div>
+                  </div>
+
+                <div class="col-md-6 col-12">
+                  <label>Type de formation</label>
+                  <div class="form-group">
+
+                    <select class="form-control" required="">
+                      <option value="infromatique">infromatique</option>
+                      <option value="electrique">electrique</option>
+                      <option value="mecanique">mecanique</option>
+                      <option value="genie civil">genie civil </option>
+                      <option value="physique">physique</option>
+                      <option value="economie">economie</option>
+                      <option value="gestion">gestion</option>
+                    </select>
+                  </div>
+                </div>
+                <div class="col-md-6 col-12">
+                  <label>Spéacialité souhaité </label>
+                  <div class="form-group">
+
+                    <select class="form-control" required="">
+                      <option value="infromatique">infromatique</option>
+                      <option value="electrique">electrique</option>
+                      <option value="mecanique">mecanique</option>
+                      <option value="genie civil">genie civil </option>
+
+                    </select>
+                  </div>
+                </div>
+                <div class="col-md-6 col-12">
+                  <label>Niveau d'entrée à ESPRIT </label>
+                  <div class="form-group">
+
+                    <select class="form-control" required="">
+                      <option value="1ere année">1ere année</option>
+                      <option value="2eme année">2eme année</option>
+                      <option value="3eme année infromatique">3eme année infromatique</option>
+                      <option value="3eme année genie civil">3eme année genie civil</option>
+                      <option value="3eme année electromécanique">3eme année electromécanique</option>
+                      <option value="4eme info">4eme info </option>
+
+
+                    </select>
+                  </div>
+                </div>
+                <div class="col-md-6 col-12">
+                  <label>date d'entretien </label>
+                  <select class="form-control" required="">
+                    <option selected="selected" value="">Choisir date d'entretien</option>
+                    <option value="08-MAY-2023">08-MAY-2023</option>
+                    <option value="09-MAY-2023">09-MAY-2023</option>
+                    <option value="10-MAY-2023">10-MAY-2023</option>
+                    <option value="11-MAY-2023">11-MAY-2023</option>
+                    <option value="12-MAY-2023">12-MAY-2023</option>
+
+                  </select>
+                </div>
+
+                <div>
+                  <div class="col-md-6 col-12">
+                    <div class="form-group">
+                      <span id="ContentPlaceHolder1_Label14" style="font-weight:bold;">Choisir mot de passe(*)</span>
+
+                    </div>
+                  </div>
+                  <div class="col-md-6 col-12">
+                    <div class="form-group">
+                      <input name="ctl00$ContentPlaceHolder1$TextBox1" id="ContentPlaceHolder1_TextBox1"
+                        class="form-control" required="" minlength="6" type="password">
+
+                    </div>
+                  </div>
+                </div>
+                <div>
+                  <div class="col-md-6 col-12">
+                    <div class="form-group">
+                      <span id="ContentPlaceHolder1_Label15"
+                        style="display:inline-block;font-weight:bold;width:300px;">Confirmer votre mot de passe</span>
+                    </div>
+                  </div>
+                  <div class="col-md-6 col-12">
+                    <div class="form-group">
+                      <input name="ctl00$ContentPlaceHolder1$TextBox2" id="ContentPlaceHolder1_TextBox2"
+                        class="form-control" type="password" required="" minlength="6">
+
+                    </div>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-md-12 col-12">
+                    <div class="form-group" style="display: flex; place-content: space-between;">
+
+
+                      <span id="ContentPlaceHolder1_CompareValidator2" style="color:#FF3300;display:none;">Les mots de
+                        passe ne sont pas identiques</span>
+                    </div>
+                  </div>
+                </div>
+
+                <div>
+                  <div class="col-md-6">
+                    <div class="form-group">
+                      <strong>
+                        <span id="ContentPlaceHolder1_Label32" style="color:Red;"> Cette photo numérique doit être
+                          récente et claire( pour vérification et identification lors de l'entretien et pour la carte
+                          d'étudiant)</span>
+                      </strong>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="row">
+                  <div class="col-md-6 ">
+                    <div class="form-group">
+                      <span id="ContentPlaceHolder1_Label28"
+                        style="display:inline-block;font-weight:bold;width:300px;">Votre photo d'identité</span>
+                    </div>
+                  </div>
+
+                </div>
+                <div class="row">
+
+                  <div class="col-md-6 ">
+                    <div class="form-group">
+                      <input type="file" class="form-control" name="cv" (change)="onFileSelected($event)">
+                    </div>
+                  </div>
+                </div>
+
+
+                <div class="col-md-6">
+                  <label>Nationalité</label>
+                  <div class="input-group mb-4">
+                    <select [(ngModel)]="selectedactivity">
+                      <option *ngFor="let option of options" value="option.value">{{ option.label }}</option>
+                    </select>
+                  </div>
+                </div>
+
+
+                <div class="col-md-6">
+                  <label>Matricule de voiture (non obligatoire)</label>
+                  <div class="input-group mb-4">
+                    <input class="form-control" placeholder="Matricule de voiture " aria-label="Matricule de voiture "
+                      type="text">
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <label>Activités Physiques et parascolaire</label>
+                  <br> <br>
+                  <div class="input-group mb-4">
+                    <select [(ngModel)]="selectedactivity">
+                      <option *ngFor="let option of optionsactivities" [value]="option.value">{{ option.label }}
+                      </option>
+                    </select>
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <label>Code postal</label>
+                  <div class="input-group mb-4">
+                    <input class="form-control" placeholder="Code postal" aria-label="Code postal" type="text">
+                  </div>
+                </div>
+
+                <div class="col-md-6">
+                  <label>Ville</label>
+                  <div class="input-group mb-4">
+                    <input class="form-control" placeholder="Ville" aria-label="Ville" type="text">
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <label>Adresse</label>
+                  <textarea name="message" class="form-control" id="message" rows="6" placeholder="Adresse"></textarea>
+                </div>
+                <div class="col-md-6">
+                  <label>Passeport</label>
+                  <div class="input-group mb-4">
+                    <input class="form-control" placeholder="Numéro" aria-label="Numéro" type="text">
+                  </div>
+                  <div class="col-md-6">
+
+                    <label>Lieu de délivrance:</label>
+                    <input type="date" name="dob" [(ngModel)]="dateOfBirth"> <br> <br>
+                    <input class="form-control" placeholder="Lieu de délivrance" aria-label="Lieu de délivrance"
+                      type="text">
+
+
+                  </div>
+                  <br>
+                  <div class="col-md-6">
+                    <label>Maladie chronique ou observation:</label>
+                    <br>
+                    <div class="form-check">
+
+                      <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+                      <label class="form-check-label" for="flexRadioDefault1">
+                        OUI
+                      </label>
+                    </div>
+                    <div class="form-check">
+                      <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2"
+                        checked>
+                      <label class="form-check-label" for="flexRadioDefault2">
+                        NON
+                      </label>
+                    </div>
+                  </div>
+                </div>
+
+              </div>
+
+              <div class="row">
+                <div class="col-md-12 text-center">
+                  <button type="submit" class="btn bg-gradient-primary mt-3 mb-0" (click)="onSumbit()">Suivant</button>
+                </div>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="container">
+  <div class="row">
+    <div class="col-lg-15 d-flex justify-content-center flex-column">
+      <div class="card d-flex blur justify-content-center p-4 shadow-lg my-sm-0 my-sm-6 mt-8 mb-5">
+        <div class="arrow-steps clearfix">
+          <div id="1" class="step current">
+            <span style="color: red;">Informations Générales</span>
+          </div>
+          <div id="2" class="step">
+            <span style="color: red;">Choix de la spécialité</span>
+          </div>
+          <div id="3" class="step">
+            <span style="color: red;">Date d'entretien</span>
+          </div>
+        </div>
+      </div>
+    </div>

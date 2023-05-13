@@ -91,6 +91,32 @@ import { QuestionComponent } from './Back/FAQ/question/question.component';
 import { QuestionItemComponent } from './Back/FAQ/question-item/question-item.component';
 import { ReponseComponent } from './Back/FAQ/reponse/reponse.component';
 import { ExamBackComponent } from './Back/FAQ/exam-back/exam-back.component';
+import { AcceuilAdmissionComponent } from './Front/admission/acceuil-admission/acceuil-admission.component';
+import { AddAdmissionComponent } from './Front/admission/add-admission/add-admission.component';
+import { FormAdmissionComponent } from './Front/admission/form-admission/form-admission.component';
+import { InterviewComponent } from './Front/interview/interview/interview.component';
+import { InterviewItemComponent } from './Front/interview/interview-item/interview-item.component';
+import { AcceuilRecrutementComponent } from './Front/recrutement/acceuil-recrutement/acceuil-recrutement.component';
+import { OffreItemComponent } from './Front/recrutement/offre-item/offre-item.component';
+import { PostulerOffreComponent } from './Front/recrutement/postuler-offre/postuler-offre.component';
+import { TopAdmissionComponent } from './Front/admission/top-admission/top-admission.component';
+import { UpdateInterviewBackComponent } from './Back/interview/update-interview-back/update-interview-back.component';
+import { AddInterviewBackComponent } from './Back/interview/add-interview-back/add-interview-back.component';
+import { InterviewBackComponent } from './Back/interview/interview-back/interview-back.component';
+import { AddTunDayComponent } from './Front/admission/add-tun-day/add-tun-day.component';
+import { AddTunNightComponent } from './Front/admission/add-tun-night/add-tun-night.component';
+import { AddForeignComponent } from './Front/admission/add-foreign/add-foreign.component';
+import { ShowInterviewComponent } from './Back/interview/show-interview/show-interview.component';
+import { RecrutementBackComponent } from './Back/recrutement/recrutement-back/recrutement-back.component';
+import { RecrutementItemBackComponent } from './Back/recrutement/recrutement-item-back/recrutement-item-back.component';
+import { AddRecrutementBackComponent } from './Back/recrutement/add-recrutement-back/add-recrutement-back.component';
+import { InscriptionBackComponent } from './Back/inscription/inscription-back/inscription-back.component';
+import { UpdateInscriptionBackComponent } from './Back/inscription/update-inscription-back/update-inscription-back.component';
+import { ClassroomComponent } from './Back/classroom/classroom/classroom.component';
+import { ClassroomItemComponent } from './Back/classroom/classroom-item/classroom-item.component';
+import { AddClassroomComponent } from './Back/classroom/add-classroom/add-classroom.component';
+import { UpdateClassroomComponent } from './Back/classroom/update-classroom/update-classroom.component';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 
 @NgModule({
@@ -181,6 +207,32 @@ import { ExamBackComponent } from './Back/FAQ/exam-back/exam-back.component';
     AddTasksAndEvaluationComponent,
     ViewTasksAndEvaluationsComponent,
     ConsultIntCondidatComponent,
+    AcceuilAdmissionComponent,
+    AddAdmissionComponent,
+    FormAdmissionComponent,
+    InterviewComponent,
+    InterviewItemComponent,
+    AcceuilRecrutementComponent,
+    OffreItemComponent,
+    PostulerOffreComponent,
+    TopAdmissionComponent,
+    UpdateInterviewBackComponent,
+    AddInterviewBackComponent,
+    InterviewBackComponent,
+    AddTunDayComponent,
+    AddTunNightComponent,
+    AddForeignComponent,
+    ShowInterviewComponent,
+    RecrutementBackComponent,
+    RecrutementItemBackComponent,
+    AddRecrutementBackComponent,
+    HomeBackComponent,
+    InscriptionBackComponent,
+    UpdateInscriptionBackComponent,
+    ClassroomComponent,
+    ClassroomItemComponent,
+    AddClassroomComponent,
+    UpdateClassroomComponent,
   ],
   imports: [
     HttpClientModule,
@@ -189,6 +241,7 @@ import { ExamBackComponent } from './Back/FAQ/exam-back/exam-back.component';
     FormsModule,
     NgxPaginationModule,
     CommonModule,
+    NgbModule
   ],
   providers: [],
   bootstrap: [AppComponent],

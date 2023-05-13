@@ -68,6 +68,22 @@ import { ReponseFAQComponent } from './Front/reponseFAQ/reponse-faq/reponse-faq.
 import { QuestionComponent } from './Back/FAQ/question/question.component';
 import { ExamBackComponent } from './Back/FAQ/exam-back/exam-back.component';
 import { ReponseComponent } from './Back/FAQ/reponse/reponse.component';
+import { AcceuilAdmissionComponent } from './Front/admission/acceuil-admission/acceuil-admission.component';
+import { InterviewComponent } from './Front/interview/interview/interview.component';
+import { AcceuilRecrutementComponent } from './Front/recrutement/acceuil-recrutement/acceuil-recrutement.component';
+import { OffreItemComponent } from './Front/recrutement/offre-item/offre-item.component';
+import { PostulerOffreComponent } from './Front/recrutement/postuler-offre/postuler-offre.component';
+import { InterviewBackComponent } from './Back/interview/interview-back/interview-back.component';
+import { AddTunDayComponent } from './Front/admission/add-tun-day/add-tun-day.component';
+import { AddTunNightComponent } from './Front/admission/add-tun-night/add-tun-night.component';
+import { AddForeignComponent } from './Front/admission/add-foreign/add-foreign.component';
+import { ShowInterviewComponent } from './Back/interview/show-interview/show-interview.component';
+import { RecrutementBackComponent } from './Back/recrutement/recrutement-back/recrutement-back.component';
+import { AddRecrutementBackComponent } from './Back/recrutement/add-recrutement-back/add-recrutement-back.component';
+import { InscriptionBackComponent } from './Back/inscription/inscription-back/inscription-back.component';
+import { ClassroomComponent } from './Back/classroom/classroom/classroom.component';
+import { AddClassroomComponent } from './Back/classroom/add-classroom/add-classroom.component';
+import { UpdateClassroomComponent } from './Back/classroom/update-classroom/update-classroom.component';
 
 
 const routes: Routes = [
@@ -87,6 +103,22 @@ const routes: Routes = [
   { path: 'faqBack', component: QuestionComponent },
   { path: 'ExamBack', component: ExamBackComponent },
   { path: 'responeQuestion/:id', component: ReponseComponent },
+  { path: 'admission', component: AcceuilAdmissionComponent },
+  { path: 'addTunDay', component: AddTunDayComponent },
+  { path: 'addTunNight', component: AddTunNightComponent },
+  { path: 'addForeign', component: AddForeignComponent },
+  { path: 'interview', component: InterviewComponent },
+  { path: 'recrutement', component: AcceuilRecrutementComponent },
+  { path: 'offre', component: OffreItemComponent },
+  { path: 'postuler/:id', component: PostulerOffreComponent },
+  { path: 'interviewBack', component: InterviewBackComponent },
+  { path: 'interviewBack/show/:id', component: ShowInterviewComponent },
+  { path: 'recrutementBack', component: RecrutementBackComponent },
+  { path: 'addRecrutementBack', component: AddRecrutementBackComponent },
+  { path: 'inscriptionBack', component: InscriptionBackComponent },
+  { path: 'classroomBack', component: ClassroomComponent },
+  { path: 'update/:id', component: UpdateClassroomComponent },
+  { path: 'addClassroom', component: AddClassroomComponent },
   /////////////////////////////////////////////////
   { path: 'nav', component: NavBarComponent },
   { path: 'events', component: ListEventComponent },
