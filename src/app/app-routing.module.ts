@@ -52,9 +52,42 @@ import { DelibNoteComponent } from './Back/delib-note/delib-note.component';
 import { AddTasksAndEvaluationComponent } from './Back/add-tasks-and-evaluation/add-tasks-and-evaluation.component';
 import { ViewTasksAndEvaluationsComponent } from './Back/view-tasks-and-evaluations/view-tasks-and-evaluations.component';
 import { ConsultIntCondidatComponent } from './Front/consult-int-condidat/consult-int-condidat.component';
+import { NotFoundComponent } from './Front/not-found/not-found.component';
+import { TrainingComponent } from './Front/training/training/training.component';
+import { AddTrainingComponent } from './Front/training/add-training/add-training.component';
+import { TrainingItemComponent } from './Front/training/training-item/training-item.component';
+import { PageAcceuilKaisComponent } from './Front/page-acceuil-kais/page-acceuil-kais.component';
+import { CourseComponent } from './Front/course/course/course.component';
+import { CentreExamenComponent } from './Front/exam/centre-examen/centre-examen.component';
+import { ChapterComponent } from './Front/chapter/chapter/chapter.component';
+import { ChapterItemComponent } from './Front/chapter/chapter-item/chapter-item.component';
+import { CertificateComponent } from './Front/certificate/certificate/certificate.component';
+import { FaqComponent } from './Front/faq/faq/faq.component';
+import { TrainingBackComponent } from './Back/training-back/training-back.component';
+import { ReponseFAQComponent } from './Front/reponseFAQ/reponse-faq/reponse-faq.component';
+import { QuestionComponent } from './Back/FAQ/question/question.component';
+import { ExamBackComponent } from './Back/FAQ/exam-back/exam-back.component';
+import { ReponseComponent } from './Back/FAQ/reponse/reponse.component';
 
 
 const routes: Routes = [
+  { path: 'home', component: PageAcceuilKaisComponent },
+  { path: 'training', component: TrainingComponent },
+  { path: 'addTraining', component: AddTrainingComponent },
+  { path: 'training/:id', component: TrainingItemComponent },
+  { path: 'course', component: CourseComponent },
+  { path: 'chapter/:id', component: ChapterComponent },
+  { path: 'chapterItem/:id', component: ChapterItemComponent },
+  { path: 'centreExamen', component: CentreExamenComponent },
+  { path: 'faq', component: FaqComponent },
+  { path: 'reponseFAQ', component: ReponseFAQComponent },
+  { path: 'certif', component: CertificateComponent },
+  { path: 'navBack', component: NavBarBackComponent },
+  { path: 'Trainingback', component: TrainingBackComponent },
+  { path: 'faqBack', component: QuestionComponent },
+  { path: 'ExamBack', component: ExamBackComponent },
+  { path: 'responeQuestion/:id', component: ReponseComponent },
+  /////////////////////////////////////////////////
   { path: 'nav', component: NavBarComponent },
   { path: 'events', component: ListEventComponent },
   { path: 'event/:id', component: DetailEventComponent },
@@ -105,7 +138,8 @@ const routes: Routes = [
   { path: 'delib', component: DelibNoteComponent },
   { path: 'neweval', component: AddTasksAndEvaluationComponent },
   { path: 'viewevaluations', component: ViewTasksAndEvaluationsComponent },
-  { path: 'intcondidat', component: ConsultIntCondidatComponent }
+  { path: 'intcondidat', component: ConsultIntCondidatComponent },
+  { path: '**', component: NotFoundComponent },
 ];
 
 @NgModule({

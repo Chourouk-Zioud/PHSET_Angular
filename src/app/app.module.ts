@@ -63,12 +63,69 @@ import { DelibNoteComponent } from './Back/delib-note/delib-note.component';
 import { AddTasksAndEvaluationComponent } from './Back/add-tasks-and-evaluation/add-tasks-and-evaluation.component';
 import { ViewTasksAndEvaluationsComponent } from './Back/view-tasks-and-evaluations/view-tasks-and-evaluations.component';
 import { ConsultIntCondidatComponent } from './Front/consult-int-condidat/consult-int-condidat.component';
+import { NotFoundComponent } from './Front/not-found/not-found.component';
+import { TrainingComponent } from './Front/training/training/training.component';
+import { AddTrainingComponent } from './Front/training/add-training/add-training.component';
+import { TrainingItemComponent } from './Front/training/training-item/training-item.component';
+import { PageAcceuilKaisComponent } from './Front/page-acceuil-kais/page-acceuil-kais.component';
+import { CourseComponent } from './Front/course/course/course.component';
+import { ExamComponent } from './Front/exam/exam/exam.component';
+import { VideoTrainingComponent } from './Front/training/video-training/video-training.component';
+import { OtherTrainingComponent } from './Front/training/other-training/other-training.component';
+import { TopTrainingComponent } from './Front/training/top-training/top-training.component';
+import { CourseItemComponent } from './Front/course/course-item/course-item.component';
+import { CentreExamenComponent } from './Front/exam/centre-examen/centre-examen.component';
+import { ChapterComponent } from './Front/chapter/chapter/chapter.component';
+import { ChapterItemComponent } from './Front/chapter/chapter-item/chapter-item.component';
+import { CertificateComponent } from './Front/certificate/certificate/certificate.component';
+import { CertificateItemComponent } from './Front/certificate/certificate-item/certificate-item.component';
+import { FaqComponent } from './Front/faq/faq/faq.component';
+import { FaqItemComponent } from './Front/faq/faq-item/faq-item.component';
+import { TopicComponent } from './Front/topic/topic/topic.component';
+import { QuestionFAQComponent } from './Front/questionFAQ/question-faq/question-faq.component';
+import { TrainingBackComponent } from './Back/training-back/training-back.component';
+import { HomeBackComponent } from './Back/home-back/home-back.component';
+import { ReponseFAQComponent } from './Front/reponseFAQ/reponse-faq/reponse-faq.component';
+import { ReponseItemComponent } from './Front/reponseFAQ/reponse-item/reponse-item.component';
+import { QuestionComponent } from './Back/FAQ/question/question.component';
+import { QuestionItemComponent } from './Back/FAQ/question-item/question-item.component';
+import { ReponseComponent } from './Back/FAQ/reponse/reponse.component';
+import { ExamBackComponent } from './Back/FAQ/exam-back/exam-back.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
     NavBarComponent,
+    NotFoundComponent,
+    TrainingComponent,
+    AddTrainingComponent,
+    TrainingItemComponent,
+    PageAcceuilKaisComponent,
+    CourseComponent,
+    ExamComponent,
+    VideoTrainingComponent,
+    OtherTrainingComponent,
+    TopTrainingComponent,
+    CourseItemComponent,
+    CentreExamenComponent,
+    ChapterComponent,
+    ChapterItemComponent,
+    CertificateComponent,
+    CertificateItemComponent,
+    FaqComponent,
+    FaqItemComponent,
+    TopicComponent,
+    QuestionFAQComponent,
+    NavBarBackComponent,
+    TrainingBackComponent,
+    HomeBackComponent,
+    ReponseFAQComponent,
+    ReponseItemComponent,
+    QuestionComponent,
+    QuestionItemComponent,
+    ReponseComponent,
+    ExamBackComponent,
     AddClaimComponent,
     NavBarBackComponent,
     FooterBackComponent,
