@@ -1,114 +1,260 @@
 <app-nav-bar></app-nav-bar>
+<header>
+    <div class="page-header min-vh-50" style="background-image:
+        url(../../assets/Front/img/admission.jpg)">
+        <span class="mask "></span>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-11 mx-auto text-white text-center">
+                    <div class="bg-gradient">
+                        <br><br><br><br><br><br><br><br><br>
+                        <h2 class="text-dark "></h2>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="position-relative overflow-hidden"
+        style="height:36px;margin-top:-35px;">
+        <div class="w-full absolute bottom-0 start-0 end-0" style="transform:
+            scale(2);transform-origin: top center;color:
+            #fff;">
+            <svg viewBox="0 0 2880 48" fill="none"
+                xmlns="http://www.w3.org/2000/svg">
+                <path d="M0 48H1437.5H2880V0H2160C1442.5 52 720 0 720 0H0V48Z"
+                    fill="currentColor"></path>
+            </svg>
+        </div>
+    </div>
+</header>
+<!-- ----------------------------------------------------------------- -->
+<section class="py-4">
+    <br><br><br><br>
+    <div class="container">
+        <div class="row bg-white shadow-lg mt-n6 border-radius-md pb-4 p-3
+            mx-sm-0 mx-1 position-relative">
+            <div style="display: flex; justify-content: center; width: 100%;">
+                <div class="intro-small">
+                    <div class="intro-small__wrapper">
+                        <div class="intro-small__container">
+                            <div class="intro-small__header">
+                                <div style="text-align: center; padding: 30px;
+                                    font-family: Arial, sans-serif;">
+                                    <div>
+                                        <i class="fas fa-university"
+                                            style="font-size:50px;padding-bottom:
+                                            3%; color: red;"></i>
+                                        <h1 class="bara" style="font-size: 36px;
+                                            margin-bottom: 10px;">Admission</h1>
+                                    </div>
+                                    <div>
+                                        <h2 style="font-size: 24px;
+                                            margin-bottom:
+                                            20px;">
+                                            La première étape vers
+                                            l’inscription à Esprit !
+                                        </h2>
+                                        <p style="font-size: 18px; line-height:
+                                            1.5;">
+                                            Après avoir soumis votre demande
+                                            d’admission en ligne, vous pourrez
+                                            facilement en suivre l’état.
+                                        </p>
+                                    </div>
+                                    <br>
+                                    <br>
+                                    <br>
+                                    <div style="display: flex; justify-content:
+                                        center;">
+                                        <button [routerLink]="['/addTunDay']"
+                                            type="button"
+                                            style="background-color:
+                                            #d3d3d3; color: #fff; border: none;
+                                            padding: 10px 20px; font-size: 16px;
+                                            border-radius: 5px; box-shadow: 0px
+                                            2px
+                                            5px gray; background-color: #dc3545;
+                                            margin-right: 20px;">
+                                            Cours du jour
+                                            (Tunisiens)
+                                        </button>
+                                        <button [routerLink]="['/addForeign']"
+                                            type="button"
+                                            style="background-color:
+                                            #d3d3d3; color: #fff; border: none;
+                                            padding: 10px 20px; font-size: 16px;
+                                            border-radius: 5px; box-shadow: 0px
+                                            2px
+                                            5px gray; background-color: #dc3545;
+                                            margin-right: 20px;">
+                                            Cours du jour
+                                            (Internationaux)
+                                        </button>
+                                        <button [routerLink]="['/addTunNight']"
+                                            type="button"
+                                            style="background-color:
+                                            #d3d3d3; color: #fff; border: none;
+                                            padding: 10px 20px; font-size: 16px;
+                                            border-radius: 5px; box-shadow: 0px
+                                            2px
+                                            5px gray; background-color: #dc3545;
+                                            margin-right: 20px;">
+                                            Cours du soir
+                                            (Tunisiens)
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!------------------------------------------------>
+    <br><br><br><br>
+    <div class="container">
+        <div class="row bg-white shadow-lg mt-n6 border-radius-md pb-4 p-3
+            mx-sm-0 mx-1 position-relative">
+            <div style="display: flex; justify-content: center; width: 100%;">
+                <div class="intro-small">
+                    <div class="intro-small__wrapper">
+                        <div class="intro-small__container">
+                            <div class="intro-small__header">
+                                <div style="text-align: center; padding: 30px;
+                                    font-family: Arial, sans-serif;">
+                                    <div>
+                                        <i class="fas fa-graduation-cap"
+                                            style="font-size:50px;padding-bottom:
+                                            3%; color: red;"></i>
+                                        <h1 class="bara" style="font-size: 36px;
+                                            margin-bottom: 10px;">CONDITIONS
+                                            D’ADMISSION</h1>
+                                    </div>
+                                    <div>
+                                        <h2 style="font-size: 24px;
+                                            margin-bottom:
+                                            20px;">
+                                            Les prérequis de chacun des
+                                            programmes
+                                        </h2>
+                                        <p style="font-size: 18px; line-height:
+                                            1.5;">
+                                            Prenez
+                                            connaissance des exigences requises
+                                            pour
+                                            l’admission à nos programmes.
+                                        </p>
+                                    </div>
+                                    <div style="display: flex; justify-content: center;">
+                                        <div class="col-sm-3 col-6 mx-auto">
+                                        <!-- Button trigger modal -->
+                                        <button type="button" class="btn bg-gradient-primary" data-bs-toggle="modal" data-bs-target="#exampleModalLong">
+                                            En savoir plus
+                                        </button>
 
-<app-top-admission></app-top-admission>
-  <!------------------------------------------------>
-  
-  <div  style="display: flex; justify-content: center; width: 100%;">
-    <div class="intro-small">
-      <div class="intro-small__wrapper" >
-        <div class="intro-small__container">
-          <div class="intro-small__header">
-            <div  class="card">
-              
-              <div style="text-align: center; padding: 30px; font-family: Arial, sans-serif;">
-                <div>
-                  <i class="fas fa-university" style="font-size:50px;"></i>
-  
-                  <h1  class="bara" style="font-size: 36px; margin-bottom: 10px;">Admission</h1>
+                                        <!-- Modal -->
+                                        <div class="modal fade" id="exampleModalLong" tabindex="-1" aria-labelledby="exampleModalLong" aria-hidden="true">
+                                            <div class="modal-dialog modal-danger modal-dialog-centered modal-" role="document">
+                                            <div class="modal-content">
+                                                <div class="modal-body p-0">
+                                                <div class="modal-content">
+                                                    <div class="modal-header">
+                                                        <h5 class="modal-title" id="exampleModalLongTitle">Pour s'inscrire au concours :</h5>
+                                                        <button type="button" class="btn btn-link text-dark my-1" data-bs-dismiss="modal">
+                                                        <i class="fas fa-times"></i>
+                                                        </button>
+                                                    </div>
+                                                    <div class="modal-body">
+                                                        <h6 style="text-align: left;">En 1ère année :</h6>
+                                                        <p style="text-align: left;">Être titulaire d'un baccalauréat scientifique, économique, technique.</p>
+                                                        <br>
+                                                        <p style="text-align: left;">En 2ème année :<br>
+                                                        <br>Être titulaire d'une attestation de réussite en 1ère année prépa ou d'une attestation de réussite en 1ère année d'école d'ingénieur (prépa intégrée)</p>
+                                                        <br>
+                                                        <p style="text-align: left;">En 3ème année :<br>
+                                                        <br> Être titulaire d'une licence scientifique ou admis au concours national d'ingénieur.</p>
+                                                        <br>
+                                                        <p style="text-align: left;">En 4ème année :<br>
+                                                        <br>  Être titulaire d'un master (M1) scientifique ou technique dans la spécialité.</p>
+                                                        <br>
+                                                        <p style="text-align: left;">En cours du soir :<br>
+                                                        <br> Être titulaire d'une licence scientifique ou technique (durée des études : 4 ans)</p>
+                                                    </div>
+                                                    <div class="modal-footer">
+                                                        <button type="button" class="btn bg-gradient-primary" data-bs-dismiss="modal">Close</button>
+                                                    </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            </div>
+                                        </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-                <div>
-                  <h2 style="font-size: 24px; margin-bottom: 20px;">La première étape vers l’inscription à Esprit !</h2>
-                  <p style="font-size: 18px; line-height: 1.5;">Après avoir soumis votre demande d’admission en ligne, vous pourrez facilement en suivre l’état.</p>
-                </div>
-                <br><br><br>
-                <div style="display: flex; justify-content: center;">
-                  <button [routerLink]="['/addTunDay']" type="button" style="background-color: #d3d3d3; color: #fff; border: none; padding: 10px 20px; font-size: 16px; border-radius: 5px; box-shadow: 0px 2px 5px gray; background-color: #dc3545; margin-right: 20px;">Cours du jour (Tunisiens)</button>
-                  <button [routerLink]="['/addTunNight']" type="button" style="background-color: #d3d3d3; color: #fff; border: none; padding: 10px 20px; font-size: 16px; border-radius: 5px; box-shadow: 0px 2px 5px gray; background-color: #dc3545; margin-right: 20px;">Cours du jour (Internationaux)</button>
-                  <button [routerLink]="['/addForeign']" type="button" style="background-color: #d3d3d3; color: #fff; border: none; padding: 10px 20px; font-size: 16px; border-radius: 5px; box-shadow: 0px 2px 5px gray; background-color: #dc3545; margin-right: 20px;">Cours du soir (Tunisiens)</button>
-                </div>
-              </div>
             </div>
-          </div>
-          <div class="intro__body">
-            <p class="text-paragraph"></p>
-            <ul class="list"></ul>
-          </div>
         </div>
-      </div>
     </div>
-  </div>
-  
-  <!------------------------------------------------>
-  
-  <br> <br> <br> <br> <br> 
-    <div  style="display: flex; justify-content: center; width: 100%;">
-    
-    <div class="intro-small">
-     
-        <div class="intro-small__container">
-          <div class="intro-small__header">
-            <div>
-              
-              <div style="text-align: center; padding: 30px; font-family: Arial, sans-serif;">
-                <div>
-                  <i class="fas fa-graduation-cap" style="font-size:50px;"></i>
-  
-                  <h1  class="bara" style="font-size: 36px; margin-bottom: 10px;">CONDITIONS D’ADMISSION</h1>
+    <!------------------------------------------------>
+    <br><br><br><br>
+    <div class="container">
+        <div class="row bg-white shadow-lg mt-n6 border-radius-md pb-4 p-3
+            mx-sm-0 mx-1 position-relative">
+            <div style="display: flex; justify-content: center; width: 100%;">
+                <div class="intro-small">
+                    <div class="intro-small__wrapper">
+                        <div class="intro-small__container">
+                            <div class="intro-small__header">
+                                <div style="text-align: center; padding: 30px;
+                                    font-family: Arial, sans-serif;">
+                                    <div>
+                                        <i class="fas fa-laptop"
+                                            style="font-size:50px;padding-bottom:
+                                            3%;color: red;"></i>
+                                        <h1 class="bara" style="font-size: 36px;
+                                            margin-bottom: 10px;">
+                                            Formation en
+                                            Alternance
+                                        </h1>
+                                    </div>
+                                    <div>
+                                        <h2 style="font-size: 24px;
+                                            margin-bottom:
+                                            20px;">Votre prochaine grande
+                                            aventure</h2>
+                                        <p style="font-size: 18px; line-height:
+                                            1.5;">
+                                            Être
+                                            titulaire d'une licence en
+                                            infromatique ou
+                                            dans une spécialité apparentée
+                                        </p>
+                                    </div>
+                                    <div style="display: flex; justify-content:
+                                        center;">
+                                        <button type="button"
+                                            style="background-color:
+                                            #d3d3d3; color: #fff; border: none;
+                                            padding:
+                                            10px 20px; font-size: 16px;
+                                            border-radius:
+                                            5px; box-shadow: 0px 2px 5px gray;
+                                            background-color: #dc3545;
+                                            margin-right:
+                                            20px;" routerLink="/alternance">En savoir plus</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-                <div>
-                  <h2 style="font-size: 24px; margin-bottom: 20px;">Les prérequis de chacun des programmes</h2>
-                  <p style="font-size: 18px; line-height: 1.5;">Prenez connaissance des exigences requises pour l’admission à nos programmes.</p>
-                </div>
-                <div style="display: flex; justify-content: center;">
-                  <button type="button" style="background-color: #d3d3d3; color: #fff; border: none; padding: 10px 20px; font-size: 16px; border-radius: 5px; box-shadow: 0px 2px 5px gray; background-color: #dc3545; margin-right: 20px;">En savoir plus </button>
-                  
-                </div>
-                
-              </div>
             </div>
-          </div>
-          <div class="intro__body">
-            <p class="text-paragraph"></p>
-            <ul class="list"></ul>
-          </div>
         </div>
-      </div>
     </div>
-  <br> <br> <br> <br> <br> <br> 
-  <!------------------------------------------------>
-  <div  style="display: flex; justify-content: center; width: 100%;">
-    
-    <div class="intro-small">
-     
-        <div class="intro-small__container">
-          <div class="intro-small__header">
-            <div>
-              
-              <div style="text-align: center; padding: 30px; font-family: Arial, sans-serif;">
-                <div>
-                  <i class="fas fa-laptop" style="font-size:50px;"></i>
-  
-  
-                  <h1  class="bara" style="font-size: 36px; margin-bottom: 10px;">Formation en Alternance</h1>
-                </div>
-                <div>
-                  <h2 style="font-size: 24px; margin-bottom: 20px;">Votre prochaine grande aventure</h2>
-                  <p style="font-size: 18px; line-height: 1.5;">Être titulaire d'une licence en infromatique ou dans une spécialité apparentée</p>
-                </div>
-                <div style="display: flex; justify-content: center;">
-                  <button type="button" style="background-color: #d3d3d3; color: #fff; border: none; padding: 10px 20px; font-size: 16px; border-radius: 5px; box-shadow: 0px 2px 5px gray; background-color: #dc3545; margin-right: 20px;">En savoir plus </button>
-                  
-                </div>
-                
-              </div>
-            </div>
-          </div>
-          <div class="intro__body">
-            <p class="text-paragraph"></p>
-            <ul class="list"></ul>
-          </div>
-        </div>
-      </div>
-    </div>
-    <br> <br> <br> <br> 
-  
+    <br><br><br><br>
+</section>
+<app-footer></app-footer>

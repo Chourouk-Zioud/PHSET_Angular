@@ -84,11 +84,15 @@ import { InscriptionBackComponent } from './Back/inscription/inscription-back/in
 import { ClassroomComponent } from './Back/classroom/classroom/classroom.component';
 import { AddClassroomComponent } from './Back/classroom/add-classroom/add-classroom.component';
 import { UpdateClassroomComponent } from './Back/classroom/update-classroom/update-classroom.component';
+import { TestComponent } from './Front/test/test.component';
+import { AlternanceComponent } from './Front/admission/alternance/alternance.component';
 
 
 const routes: Routes = [
   { path: 'home', component: PageAcceuilKaisComponent },
+  { path: 'test', component: TestComponent },
   { path: 'training', component: TrainingComponent },
+  { path: 'alternance', component: AlternanceComponent },
   { path: 'addTraining', component: AddTrainingComponent },
   { path: 'training/:id', component: TrainingItemComponent },
   { path: 'course', component: CourseComponent },

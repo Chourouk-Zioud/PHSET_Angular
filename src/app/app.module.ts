@@ -28,7 +28,6 @@ import { LeisureEventComponent } from './Front/leisure-event/leisure-event.compo
 import { ListEventComponent } from './Front/list-event/list-event.component';
 import { ListPostComponent } from './Front/list-post/list-post.component';
 import { PaiementComponent } from './Front/paiement/paiement.component';
-import { SocktComponent } from './Front/sockt/sockt.component';
 import { SubjectApp0Component } from './Front/subject-app0/subject-app0.component';
 import { UploadVideoComponent } from './Front/upload-video/upload-video.component';
 import { NgxPaginationModule } from 'ngx-pagination';
@@ -93,13 +92,11 @@ import { ReponseComponent } from './Back/FAQ/reponse/reponse.component';
 import { ExamBackComponent } from './Back/FAQ/exam-back/exam-back.component';
 import { AcceuilAdmissionComponent } from './Front/admission/acceuil-admission/acceuil-admission.component';
 import { AddAdmissionComponent } from './Front/admission/add-admission/add-admission.component';
-import { FormAdmissionComponent } from './Front/admission/form-admission/form-admission.component';
 import { InterviewComponent } from './Front/interview/interview/interview.component';
 import { InterviewItemComponent } from './Front/interview/interview-item/interview-item.component';
 import { AcceuilRecrutementComponent } from './Front/recrutement/acceuil-recrutement/acceuil-recrutement.component';
 import { OffreItemComponent } from './Front/recrutement/offre-item/offre-item.component';
 import { PostulerOffreComponent } from './Front/recrutement/postuler-offre/postuler-offre.component';
-import { TopAdmissionComponent } from './Front/admission/top-admission/top-admission.component';
 import { UpdateInterviewBackComponent } from './Back/interview/update-interview-back/update-interview-back.component';
 import { AddInterviewBackComponent } from './Back/interview/add-interview-back/add-interview-back.component';
 import { InterviewBackComponent } from './Back/interview/interview-back/interview-back.component';
@@ -117,6 +114,8 @@ import { ClassroomItemComponent } from './Back/classroom/classroom-item/classroo
 import { AddClassroomComponent } from './Back/classroom/add-classroom/add-classroom.component';
 import { UpdateClassroomComponent } from './Back/classroom/update-classroom/update-classroom.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { TestComponent } from './Front/test/test.component';
+import { AlternanceComponent } from './Front/admission/alternance/alternance.component';
 
 
 @NgModule({
@@ -175,7 +174,6 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
     ListEventComponent,
     ListPostComponent,
     PaiementComponent,
-    SocktComponent,
     SubjectApp0Component,
     UploadVideoComponent,
     CalenderComponent,
@@ -209,13 +207,11 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
     ConsultIntCondidatComponent,
     AcceuilAdmissionComponent,
     AddAdmissionComponent,
-    FormAdmissionComponent,
     InterviewComponent,
     InterviewItemComponent,
     AcceuilRecrutementComponent,
     OffreItemComponent,
     PostulerOffreComponent,
-    TopAdmissionComponent,
     UpdateInterviewBackComponent,
     AddInterviewBackComponent,
     InterviewBackComponent,
@@ -233,6 +229,8 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
     ClassroomItemComponent,
     AddClassroomComponent,
     UpdateClassroomComponent,
+    TestComponent,
+    AlternanceComponent,
   ],
   imports: [
     HttpClientModule,
