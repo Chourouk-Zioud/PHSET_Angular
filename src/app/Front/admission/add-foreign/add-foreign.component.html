@@ -48,14 +48,14 @@
               <div class="row">
                 
                 <div class="col-md-6">
-                  <label for="nom">Nom :</label>
+                  <label for="nom"> Last name  :</label>
                   <div class="input-group mb-4">
                     <input class="form-control" placeholder="Nom" aria-label="Nom" type="text" id="nom" name="nom"
                       [(ngModel)]="inscription.user.firstName" required minlength="3">
                   </div>
                 </div>
                 <div class="col-md-6 ps-2">
-                  <label>Prénom</label>
+                  <label>First name</label>
                     <div class="input-group mb-4">
                       <input class="form-control" placeholder="prenom" aria-label="prenom" type="text" name="prenom"
                         [(ngModel)]="inscription.user.lastName">
@@ -72,19 +72,19 @@
                     </div>
                 </div>
                 <div class="col-md-6 ps-2">
-                  <label>Confirmer Email</label>
+                  <label>Confirm Email</label>
                   <div class="input-group">
                     <input name="ConfirmEmail" [(ngModel)]="inscription.user.Confirmemail" #email="ngModel" class="form-control"
                       placeholder="Confirmer Email" aria-label="Confirmer Email" type="email" compare="email" />
                       <div *ngIf="email.errors && (email.dirty || email.touched)">
-                        Les adresses e-mail ne correspondent pas.</div>
+                       The email addresses do not match</div>
                   </div>
                 </div>
               </div>
               <!----------------------------------------------------------------------->
               <div class="row">
                 <div class="col-md-6">
-                  <label>Civilité</label>
+                  <label>Civility</label>
                   <div class="input-group mb-4">
                     <div class="row form-inline">
                       <div class="form-check">
@@ -100,13 +100,13 @@
                       <div class="form-check">
                         <input name="Civilité" [(ngModel)]="inscription.user.civility" #Civilité="ngModel" class="form-check-input"
                           type="radio" name="Civilité" id="Civilité3" />
-                        <label class="form-check-label" for="Civilité">Mlle</label>
+                        <label class="form-check-label" for="Civilité">Miss</label>
                       </div>
                     </div>
                   </div>
                 </div>
                 <div class="col-md-6 ps-2">
-                  <label>Date de naissance</label>
+                  <label>Date of birth.</label>
                   <div class="input-group">
                     <input name="BD" [(ngModel)]="inscription.user.birthDate" #birthDate="ngModel" type="date"
                       required />
@@ -123,7 +123,7 @@
                   </div>
                 </div>
                 <div class="col-md-6 ps-2">
-                  <label>Pays</label>
+                  <label>Country</label>
                   <div class="input-group mb-4">
                     <select class="form-control" [(ngModel)]="inscription.user.Gouvernorat">
                       <option value="Tunis"> Tunis</option>
@@ -158,24 +158,24 @@
               <!----------------------------------------------------------------------->
               <div class="row">
                 <div class="col-md-6">
-                  <label>Num Téléphone</label>
+                  <label>PHone number</label>
                   <div class="input-group mb-4">
                     <input class="form-control" aria-label="Num Téléphone" [(ngModel)]="inscription.user.phone"
                       type="text">
                   </div>
                 </div>
                 <div class="col-md-6">
-                    <label>Diplôme du baccalauréat</label>
+                    <label>Diploma of the Baccalaureate</label>
                     <div class="input-group mb-4">
                       <div class="form-check form-check-inline">
                         <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1"
                           [checked]="!enCours" (click)="enableCoursSoir()" />
-                        <label class="form-check-label" for="flexRadioDefault1">Déjà obtenu</label>
+                        <label class="form-check-label" for="flexRadioDefault1">Already obtained</label>
                       </div>
                       <div class="form-check form-check-inline">
                         <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2"
                           [checked]="enCours" (click)="disableCoursSoir()" />
-                        <label class="form-check-label" for="flexRadioDefault2">En cours</label>
+                        <label class="form-check-label" for="flexRadioDefault2">In progress</label>
                       </div>
                     </div>
                   </div>
@@ -184,17 +184,17 @@
               <div class="row" hidden>
                 
                 <div class="col-md-6 ps-2">
-                  <label>Cours Jour / Cours Soir</label>
+                  <label>daytime classes / evening classes</label>
                   <div class="input-group">
                     <div class="form-check form-check-inline">
                       <input class="form-check-input" type="radio" name="flexRadioDefault2" id="flexRadioDefault3"
                         disabled checked />
-                      <label class="form-check-label" for="flexRadioDefault3">Cours Jour</label>
+                      <label class="form-check-label" for="flexRadioDefault3">daytime classes</label>
                     </div>
                     <div class="form-check form-check-inline">
                       <input class="form-check-input" type="radio" name="flexRadioDefault2" id="flexRadioDefault4"
                       disabled  />
-                      <label class="form-check-label" for="flexRadioDefault4">Cours Soir</label>
+                      <label class="form-check-label" for="flexRadioDefault4">evening classes</label>
                     </div>
                   </div>
                 </div>
@@ -202,10 +202,10 @@
               <!----------------------------------------------------------------------->
               <div class="row">
                 <div class="col-md-6">
-                  <label>Nature du baccalauréat</label>
+                  <label>Type of baccalaureate</label>
                   <div class="input-group mb-4">
                     <select class="form-control" required disabled>
-                      <option value="E" selected="selected">Bac Etranger</option>
+                      <option value="E" selected="selected">Foreign Baccalaureate</option>
                     </select>
                   </div>
                 </div>
@@ -213,9 +213,9 @@
                   <label>Section</label>
                   <div class="input-group">
                     <select class="form-control" required="">
-                      <option value="Mathematique">Mathematique</option>
+                      <option value="Mathematique">Mathematics</option>
                       <option value="Technique" selected="selected">
-                        Technique
+                        Technical
                       </option>
                       <option value="Sciences">Sciences</option>
                     </select>
@@ -225,7 +225,7 @@
               <!----------------------------------------------------------------------->
               <div class="row">
                 <div class="col-md-6">
-                  <label>Année baccalauréat</label>
+                  <label>Year of the baccalaureate</label>
                   <div class="input-group mb-4">
                     <input class="form-control" placeholder="yyyy" name="yp" [(ngModel)]="model" ngbDatepicker
                       #d="ngbDatepicker" datepickerMode="year" [value]="currentYear" [disabled]="enCours">
@@ -237,7 +237,7 @@
                   </div>
                 </div>
                 <div class="col-md-6 ps-2">
-                  <label>Moyenne baccalauréat</label>
+                  <label>Average for the baccalaureate</label>
                   <div class="input-group">
                     <input class="form-control" placeholder="Moyenne baccalauréat " aria-label="Moyenne baccalauréat"
                       type="text" [disabled]="enCours"/>
@@ -247,7 +247,7 @@
               <!----------------------------------------------------------------------->
               <div class="row">
                 <div class="col-md-6">
-                  <label>Niveau d'études atteint</label>
+                  <label>Level of education achieved</label>
                   <div class="input-group mb-4">
                     <select id="ContentPlaceHolder1_DropDownList11" class="form-control" required=""
                       [disabled]="enCours">
@@ -260,16 +260,16 @@
                   </div>
                 </div>
                 <div class="col-md-6 ps-2">
-                  <label>Type de formation</label>
+                  <label>Type of training</label>
                   <div class="input-group">
                     <select class="form-control" required="">
-                      <option value="infromatique">infromatique</option>
-                      <option value="electrique">electrique</option>
-                      <option value="mecanique">mecanique</option>
-                      <option value="genie civil">genie civil</option>
-                      <option value="physique">physique</option>
-                      <option value="economie">economie</option>
-                      <option value="gestion">gestion</option>
+                      <option value="Informatics">Informatics</option>
+                      <option value="Electric">Electric</option>
+                      <option value="Mechanical">Mechanical</option>
+                      <option value="Civil engineering">Civil engineering </option>
+                      <option value="Physics">Physics</option>
+                      <option value="Economics">Economics</option>
+                      <option value="Management">Management</option>
                     </select>
                   </div>
                 </div>
@@ -277,32 +277,32 @@
               <!----------------------------------------------------------------------->
               <div class="row">
                 <div class="col-md-6">
-                  <label>Spéacialité souhaité</label>
+                  <label>Desired specialty</label>
                   <div class="input-group mb-4">
                     <select class="form-control" required="">
-                      <option value="infromatique">infromatique</option>
-                      <option value="electrique">electrique</option>
-                      <option value="mecanique">mecanique</option>
-                      <option value="genie civil">genie civil</option>
+                      <option value="infromatique">Informatics</option>
+                      <option value="electrique">Electric</option>
+                      <option value="mecanique">Mechanical</option>
+                      <option value="genie civil"> Civil engineering</option>
                     </select>
                   </div>
                 </div>
                 <div class="col-md-6 ps-2">
-                  <label>Niveau d'entrée à ESPRIT</label>
+                  <label>Entry level at ESPRIT</label>
                   <div class="input-group">
                     <select class="form-control" [value]="" required="" [disabled]="enCours">
-                      <option value="1ere année" selected="selected">1ere année</option>
-                      <option value="2eme année">2eme année</option>
+                      <option value="1ere année" selected="selected">First year</option>
+                      <option value="2eme année">Second year </option>
                       <option value="3eme année infromatique">
-                        3eme année infromatique
+                        Third year in Computer Science
                       </option>
                       <option value="3eme année genie civil">
-                        3eme année genie civil
+                        Third year in  Civil engineering
                       </option>
                       <option value="3eme année electromécanique">
-                        3eme année electromécanique
+                        Third year Electromechanics
                       </option>
-                      <option value="4eme info">4eme info</option>
+                      <option value="4eme info">Fourth year in Computer Science</option>
                     </select>
                   </div>
                 </div>

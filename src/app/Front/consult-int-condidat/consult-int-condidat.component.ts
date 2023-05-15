@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { Interview } from 'src/app/Models/Interview';
+import { AdmissionService } from 'src/app/Services/admission.service';
 import { EvaluationService } from 'src/app/Services/evaluation.service';
 
 @Component({
@@ -12,12 +13,12 @@ export class ConsultIntCondidatComponent implements OnInit {
 
   
   interviews!: Interview[];
-  constructor(private ps : EvaluationService, private router: Router) { }
+  constructor(private ps : EvaluationService, private as: AdmissionService , private router: Router) { }
 
 
   ngOnInit(): void {
-    this.ps.getInterviewjury().subscribe({
-      next:(data)=>this.interviews=data,
+    this.as.retrieveInterviewByCurrentUser(2).subscribe({
+      next: (data) => (this.interviews = data),
     });
   }
 
