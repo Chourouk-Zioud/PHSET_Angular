@@ -10,7 +10,7 @@ import { Classroom } from '../Models/Classroom';
   providedIn: 'root',
 })
 export class AdmissionService {
-  URL = 'http://localhost:8081/Rev/admission';
+  URL = 'http://localhost:8081/Rev';
   constructor(private http: HttpClient) {}
 
   findStatutInscriptionCurrentUser(): Observable<boolean> {
