@@ -8,6 +8,7 @@ import { FaqService } from 'src/app/Services/faq.service';
   styleUrls: ['./training-back.component.css'],
 })
 export class TrainingBackComponent implements OnInit {
+  p!:number;
 
   ListTraining!: Training[];
   constructor(private service: FaqService) {}

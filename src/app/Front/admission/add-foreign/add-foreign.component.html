@@ -46,18 +46,17 @@
             <div class="card-body">
               <!----------------------------------------------------------------------->
               <div class="row">
-                
                 <div class="col-md-6">
-                  <label for="nom"> Last name  :</label>
+                  <label for="nom">First Name :</label>
                   <div class="input-group mb-4">
-                    <input class="form-control" placeholder="Nom" aria-label="Nom" type="text" id="nom" name="nom"
+                    <input class="form-control" placeholder="Nom" aria-label="firstName" type="text" id="firstName" name="firstName"
                       [(ngModel)]="inscription.user.firstName" required minlength="3">
                   </div>
                 </div>
                 <div class="col-md-6 ps-2">
-                  <label>First name</label>
+                  <label>Last Name</label>
                     <div class="input-group mb-4">
-                      <input class="form-control" placeholder="prenom" aria-label="prenom" type="text" name="prenom"
+                      <input class="form-control" placeholder="lastName" aria-label="lastName" type="text" id="lastName" name="lastName"
                         [(ngModel)]="inscription.user.lastName">
                     </div>
                 </div>
@@ -67,7 +66,7 @@
                 <div class="col-md-6">
                   <label>Email</label>
                     <div class="input-group">
-                      <input type="email" id="email" name="email" class="form-control" placeholder="xxxxx.xxxxx@xxxx.xxx"
+                      <input class="form-control" placeholder="xxxxx.xxxxx@xxxx.xxx" aria-label="email" type="email" id="email" name="email" 
                         [(ngModel)]="inscription.user.email" required pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$">
                     </div>
                 </div>
@@ -77,7 +76,8 @@
                     <input name="ConfirmEmail" [(ngModel)]="inscription.user.Confirmemail" #email="ngModel" class="form-control"
                       placeholder="Confirmer Email" aria-label="Confirmer Email" type="email" compare="email" />
                       <div *ngIf="email.errors && (email.dirty || email.touched)">
-                       The email addresses do not match</div>
+                        Les adresses e-mail ne correspondent pas.
+                      </div>
                   </div>
                 </div>
               </div>
@@ -106,51 +106,48 @@
                   </div>
                 </div>
                 <div class="col-md-6 ps-2">
-                  <label>Date of birth.</label>
+                  <label>Birth Date</label>
                   <div class="input-group">
-                    <input name="BD" [(ngModel)]="inscription.user.birthDate" #birthDate="ngModel" type="date"
-                      required />
+                    <input aria-label="birthDate" type="date" id="birthDate" name="birthDate" [(ngModel)]="inscription.user.birthDate" required />
                   </div>
                 </div>
-              </div>
+              </div> 
               <!----------------------------------------------------------------------->
               <div class="row">
                 <div class="col-md-6">
                   <label>Passeport</label>
                   <div class="input-group mb-4">
-                    <input class="form-control" aria-label="Passeport" type="text" name="passeport" [(ngModel)]="inscription.user.passeport"
+                    <input class="form-control" aria-label="passeport" type="text" id="passeport" name="passeport" [(ngModel)]="inscription.user.passeport"
                       pattern="[0-9]{8}">
                   </div>
                 </div>
                 <div class="col-md-6 ps-2">
-                  <label>Country</label>
+                  <label>Gouvernorat</label>
                   <div class="input-group mb-4">
-                    <select class="form-control" [(ngModel)]="inscription.user.Gouvernorat">
-                      <option value="Tunis"> Tunis</option>
-                      <option value="Ben Arous"> Ben Arous</option>
+                    <select class="form-control" aria-label="address" type="text" id="address" name="address" [(ngModel)]="inscription.user.address">
                       <option value="Ariana"> Ariana</option>
-                      <option value="Manouba"> Manouba</option>
-                      <option value="Nabeul"> Nabeul</option>
-                      <option value="Zaghouan"> Zaghouan</option>
-                      <option value="Bizerte"> Bizerte</option>
                       <option value="Béja"> Béja</option>
+                      <option value="Ben Arous"> Ben Arous</option>
+                      <option value="Bizerte"> Bizerte</option>
+                      <option value="Gabès"> Gabès</option>
                       <option value="Jendouba"> Jendouba</option>
-                      <option value="Le Kef"> Le Kef</option>
-                      <option value="Siliana"> Siliana</option>
                       <option value="Kairouan"> Kairouan</option>
                       <option value="Kasserine"> Kasserine</option>
+                      <option value="Kebili"> Kebili</option>
+                      <option value="Le Kef"> Le Kef</option>
+                      <option value="Mahdia"> Mahdia</option>
+                      <option value="Manouba"> Manouba</option>
+                      <option value="Medenine"> Medenine</option>
+                      <option value="Monastir"> Monastir</option>
+                      <option value="Nabeul"> Nabeul</option>
+                      <option value="Sfax"> Sfax</option>
+                      <option value="Siliana"> Siliana</option>
                       <option value="Sidi Bouzid"> Sidi Bouzid</option>
                       <option value="Sousse"> Sousse</option>
-                      <option value="Monastir"> Monastir</option>
-                      <option value="Mahdia"> Mahdia</option>
-                      <option value="Sfax"> Sfax</option>
-                      <option value="Gabès"> Gabès</option>
-                      <option value="Medenine"> Medenine</option>
                       <option value="Tataouine"> Tataouine</option>
                       <option value="Tozeur"> Tozeur</option>
-                      <option value="Kebili"> Kebili</option>
-                      <option value="Etranger"> test </option>
-
+                      <option value="Tunis"> Tunis</option>
+                      <option value="Zaghouan"> Zaghouan</option>
                     </select>
                   </div>
                 </div>
@@ -158,10 +155,9 @@
               <!----------------------------------------------------------------------->
               <div class="row">
                 <div class="col-md-6">
-                  <label>PHone number</label>
+                  <label>Phone</label>
                   <div class="input-group mb-4">
-                    <input class="form-control" aria-label="Num Téléphone" [(ngModel)]="inscription.user.phone"
-                      type="text">
+                    <input class="form-control" aria-label="phone" type="number" id="phone" name="phone"  [(ngModel)]="inscription.user.phone">
                   </div>
                 </div>
                 <div class="col-md-6">

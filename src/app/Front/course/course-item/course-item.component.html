@@ -1,44 +1,44 @@
-<div class="card card-profile overflow-hidden">
-  <div class="row">
-    <div class="col-lg-4 col-md-6 col-12 pe-lg-0">
-      <a href="javascript:;">
-        <div class="p-3 pe-md-0">
-          <div *ngIf="course.technology === 'Angular'">
-            <img class="border-radius-md" style="width: 100%;height: 50%;float: left;" src="../../../../assets/Front/img/enum/Angular.png" alt="image">
-          </div>
-          <div *ngIf="course.technology === 'Spring'">
-            <img class="border-radius-md" style="width: 100%;height: 50%;float: left;" src="../../../../assets/Front/img/enum/spring.png" alt="image">
-          </div>
-          <div *ngIf="course.technology === 'Python'">
-            <img class="border-radius-md" style="width: 100%;height: 50%;float: left;" src="../../../../assets/Front/img/enum/python.png" alt="image">
-          </div>
-          <div *ngIf="course.technology === 'React'">
-            <img class="border-radius-md" style="width: 100%;height: 50%;float: left;" src="../../../../assets/Front/img/enum/react.png" alt="image">
-          </div>
-          <div *ngIf="course.technology === 'NodeJs'">
-            <img class="border-radius-md" style="width: 100%;height: 50%;float: left;" src="../../../../assets/Front/img/enum/node.png" alt="image">
-          </div>
-          <div *ngIf="course.technology === 'Symfony'">
-            <img class="border-radius-md" style="width: 100%;height: 50%;float: left;" src="../../../../assets/Front/img/enum/sf.png" alt="image">
-          </div>
-          <div *ngIf="course.technology === 'PHP'">
-            <img class="border-radius-md" style="width: 100%;height: 50%;float: left;" src="../../../../assets/Front/img/enum/php.png" alt="image">
-          </div>
-          <div *ngIf="course.technology === 'JAVA'">
-            <img class="border-radius-md" style="width: 100%;height: 50%;float: left;" src="../../../../assets/Front/img/enum/Java.png" alt="image">
-          </div>
-          <div *ngIf="course.technology === 'JavaScript'">
-            <img class="border-radius-md" style="width: 100%;height: 50%;float: left;" src="../../../../assets/Front/img/enum/JS.png" alt="image">
-          </div>
-        </div>
-      </a>
-    </div>
-    <div class="col-lg-8 col-md-6 col-12 ps-lg-0 my-auto">
-      <div class="card-body">
-        <h3 class="mb-0" [routerLink]="['/chapter',course.idCours]">{{ course.nameCours }}</h3>
-        <h5 class="text-info">{{ course.technology }}</h5>
-        <p class="mb-0" style="text-align: left;">{{ course.descriptionCours }}</p>
+<div class="card">
+      <h6 style="text-align: center;">{{ course.nameCours }}</h6>
+  <div class="card-header p-0 mx-3 mt-3 position-relative z-index-1 d-flex justify-content-center align-items-center" *ngIf="course.technology === 'Angular'">
+      <img src="../../../../assets/Front/img/enum/Angular.png" style="width: 50%;height: 50%;" class="img-fluid border-radius-lg">
+  </div>
+  <div class="card-header p-0 mx-3 mt-3 position-relative z-index-1 d-flex justify-content-center align-items-center" *ngIf="course.technology === 'Spring'">
+    <img src="../../../../assets/Front/img/enum/spring.png" style="width: 50%;height: 50%;" class="img-fluid border-radius-lg">
+  </div>
+  <div class="card-header p-0 mx-3 mt-3 position-relative z-index-1 d-flex justify-content-center align-items-center" *ngIf="course.technology === 'Python'">
+    <img src="../../../../assets/Front/img/enum/python.png" style="width: 50%;height: 50%;" class="img-fluid border-radius-lg">
+  </div>
+  <div class="card-header p-0 mx-3 mt-3 position-relative z-index-1 d-flex justify-content-center align-items-center" *ngIf="course.technology === 'React'">
+    <img src="../../../../assets/Front/img/enum/react.png" style="width: 50%;height: 50%;" class="img-fluid border-radius-lg">
+  </div>
+  <div class="card-header p-0 mx-3 mt-3 position-relative z-index-1 d-flex justify-content-center align-items-center" *ngIf="course.technology === 'NodeJs'">
+    <img src="../../../../assets/Front/img/enum/node.png" style="width: 50%;height: 50%;" class="img-fluid border-radius-lg">
+  </div>
+  <div class="card-header p-0 mx-3 mt-3 position-relative z-index-1 d-flex justify-content-center align-items-center" *ngIf="course.technology === 'Symfony'">
+    <img src="../../../../assets/Front/img/enum/sf.png" style="width: 50%;height: 50%;" class="img-fluid border-radius-lg">
+  </div>
+  <div class="card-header p-0 mx-3 mt-3 position-relative z-index-1 d-flex justify-content-center align-items-center" *ngIf="course.technology === 'PHP'">
+    <img src="../../../../assets/Front/img/enum/php.png" style="width: 50%;height: 50%;" class="img-fluid border-radius-lg">
+  </div>
+  <div class="card-header p-0 mx-3 mt-3 position-relative z-index-1 d-flex justify-content-center align-items-center" *ngIf="course.technology === 'JAVA'">
+    <img src="../../../../assets/Front/img/enum/Java.png" style="width: 50%;height: 50%;" class="img-fluid border-radius-lg">
+  </div>
+  <div class="card-header p-0 mx-3 mt-3 position-relative z-index-1 d-flex justify-content-center align-items-center" *ngIf="course.technology === 'JavaScript'">
+    <img src="../../../../assets/Front/img/enum/JS.png" style="width: 50%;height: 50%;" class="img-fluid border-radius-lg">
+  </div>
+  <div class="card-body">
+      <div class="w-50 mx-auto">
       </div>
-    </div>
+      <p class="card-description mb-5 mt-3">
+      "{{ course.descriptionCours }}"
+      </p>
+      <div>
+      <span>&#8213;</span>
+      {{ course.professorCours }}
+      </div>
+      <a href="javascript:;" class="text-danger icon-move-right float-end">Read More
+      <i class="fas fa-arrow-right text-sm ms-1"></i>
+      </a>
   </div>
 </div>

@@ -45,11 +45,7 @@ export class AddAdmissionComponent implements OnInit {
   }
 
   onSumbit(){
-    this.as.newAdmission(this.inscription,1).subscribe();
-    if(this.cv!=null){
-      this.as.setFile(this.cv).subscribe();
-    }
-
+    this.as.newAdmissionTN(this.inscription,1,2).subscribe();
   }
 
   onFileSelected(event: any){

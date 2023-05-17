@@ -1,38 +1,17 @@
 <app-nav-bar></app-nav-bar>
 
-  <section>
-    <div class="page-header min-vh-100">
-      <div class="container">
-        <div class="row">
-          <div class="col-xl-4 col-lg-5 col-md-7 d-flex flex-column mx-lg-0 mx-auto">
-            <div class="card card-plain">
-              
-                <div class="d-flex align-items-center justify-content-center vh-100">
-                    <div class="text-center">
-                        <h1 class="display-1 fw-bold">404</h1>
-                        <p class="fs-3"> <span class="text-danger">Opps!</span> Page not found.</p>
-                        <p class="lead">
-                            The page you’re looking for doesn’t exist.
-                          </p>
-                        <a href="" class="btn btn-primary">Go Home</a>
-                    </div>
-                </div>
-
-            </div>
-          </div>
-          <div class="col-6 d-lg-flex d-none h-100 my-auto pe-0 position-absolute top-0 end-0 text-center justify-content-center flex-column">
-            <div class="position-relative bg-gradient-primary h-100 m-3 px-7 border-radius-lg d-flex flex-column justify-content-center">
-              <img src="../../../assets/Front/img/shapes/pattern-lines.svg" alt="pattern-lines" class="position-absolute opacity-4 start-0">
-              <div class="position-relative">
-                <img class="max-width-500 w-100 position-relative z-index-2" src="../../../assets/Front/img/404.png">
-              </div>
-              <h4 class="mt-5 text-white font-weight-bolder">Opps!</h4>
-              <p class="text-white"></p>
-            </div>
-          </div>
-        </div>
+<section class="my-10">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-6 my-auto">
+        <h1 class="display-1 text-bolder text-gradient text-danger">Error 404</h1>
+        <h2>Page not found</h2>
+        <p class="lead">We suggest you to go to the homepage while we solve this issue.</p>
+        <button type="button" class="btn bg-gradient-primary" data-bs-toggle="modal" data-bs-target="#exampleModalLong">Go to Homepage</button>
+      </div>
+      <div class="col-lg-6 my-auto position-relative">
+        <img class="w-100 position-relative" src="../assets/Front/img/illustrations/error-404.png" alt="404-error">
       </div>
     </div>
-  </section>
-
-
+  </div>
+</section>

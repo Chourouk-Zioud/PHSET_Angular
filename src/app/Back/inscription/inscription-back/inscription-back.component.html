@@ -1,104 +1,120 @@
-<head>
-    <link rel="stylesheet" href="/assets/Back/vendors/mdi/css/materialdesignicons.min.css">
-    <link rel="stylesheet" href="/assets/Back/vendors/flag-icon-css/css/flag-icon.min.css">
-    <link rel="stylesheet" href="/assets/Back/vendors/css/vendor.bundle.base.css">
-    <link rel="stylesheet" href="/assets/Back/vendors/jquery-bar-rating/css-stars.css" />
-    <link rel="stylesheet" href="/assets/Back/vendors/font-awesome/css/font-awesome.min.css" />
-    <link rel="stylesheet" href="/assets/Back/css/demo_1/style.css" />
-    <link rel="shortcut icon" href="/assets/Back/images/favicon.png" />
-</head>
-
+<app-nav-bar-back></app-nav-bar-back>
 <div class="container-scroller">
-    <!-- partial:partials/_sidebar.html -->
-    <nav class="sidebar sidebar-offcanvas" id="sidebar">
-        <ul class="nav">
-            <app-home-back></app-home-back>
-        </ul>
-    </nav>
-    <nav class="navbar default-layout-navbar col-lg-12 col-12 p-0 fixed-top d-flex flex-row">
-        <div class="navbar-menu-wrapper d-flex align-items-stretch">
-            <button class="navbar-toggler navbar-toggler align-self-center" type="button" data-toggle="minimize">
-                <span class="mdi mdi-chevron-double-left"></span>
-            </button>
-            <div class="text-center navbar-brand-wrapper d-flex align-items-center justify-content-center">
-                <a class="navbar-brand brand-logo-mini" href="index.html"><img src="../images/logo-mini.svg"
-                        alt="logo" /></a>
-            </div>
-            <button class="navbar-toggler navbar-toggler-right d-lg-none align-self-center" type="button"
-                data-toggle="offcanvas">
-                <span class="mdi mdi-menu"></span>
-            </button>
-        </div>
-    </nav>
-        <!-- partial -->
-        <div class="main-panel">
-            <div class="content-wrapper"><br><br><br>
+    <app-side-nav-bar></app-side-nav-bar>
+
+
+    <div class="main-panel">
+        <div class="content-wrapper">
+            <div class="row">
                 <div class="row">
-                    <div class="col-lg-12 grid-margin stretch-card">
-                        <div class="card">
-                            <div class="card-body">
-                                <h4 class="card-title">List of Inscriptions</h4>
-                                <div class="table-responsive">
-                                    <table class="table table-striped">
-                                        <thead>
-                                            <tr>
-                                                <th>ID</th>
-                                                <th>DATE INSCRIPTION</th>
-                                                <th>FIRST NAME</th>
-                                                <th>LAST NAME</th>
-                                                <th>EMAIL</th>
-                                                <th>NATIONALITY</th>
-                                                <th>Offer</th>
-                                                <th>C.V.</th>
-                                                <th>C.L.</th>
-                                            </tr>
-                                        </thead>
-                                        <tbody >
-                                            <tr *ngFor="let ins of ListInscriptions,let i=index">
-                                                <td class="py-3">
-                                                    {{ ins.idInscription }}
-                                                </td>
-                                                <td class="py-3">
-                                                    {{ ins.dateInscription }}
-                                                </td>
-                                                <td class="py-3">
-                                                    {{ ins.user.firstName }}
-                                                </td>
-                                                <td class="py-3">
-                                                    {{ ins.user. lastName}}
-                                                </td>
-                                                <td class="py-3">
-                                                    {{ ins.user.email }}
-                                                </td>
-                                                <td class="py-3">
-                                                    {{ ins.user.nationality }}
-                                                </td>
-                                                <td class="py-3">
-                                                    {{ ins.user.Offer}}
-                                                </td>
-                                                <td class="py-3">
-                                                    {{ ins.user.cv}}
-                                                </td> <td class="py-3">
-                                                    {{ ins.user.lm}}
-                                                </td>
-                                                <td class="py-3">
-                                                    <a [routerLink]="['./show',ins.idInscription]"><i class="mdi mdi-open-in-new"></i></a>
-                                                    
-                                                </td>
-                                                <td class="py-3">
-                                                    <a [routerLink]="['./update',ins.idInscription]"><i class="mdi mdi-table-edit"></i></a>
-                                                </td>
-                                                <td class="py-3">
-                                                    <a [routerLink]="['./delete',ins.idInscription]"><i class="mdi mdi-delete-sweep"></i></a>
-                                                </td>
-                                            </tr>
-                                        </tbody>
-                                    </table>
+                    <div class="col-lg-10 grid-margin stretch-card">
+                        <div class="col-md-4">
+                            <div class="form-group row">
+                                <label class="col-sm-3 col-form-label">Date</label>
+                                <div class="col-sm-8">
+                                    <input type="date" class="form-control" [(ngModel)]="date"
+                                        (ngModelChange)="formatDate($event)" />
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-3 offset-md-5">
+                            <div class="form-group row">
+                                <label class="col-sm-3 col-form-label">Type </label>
+                                <div class="col-sm-7">
+                                    <select class="form-control row" id="object" name="object" [(ngModel)]="object">
+                                        <option value="Job">Job</option>
+                                        <option value="Admission">Admission</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <div class="form-group row">
+                                <div class="col-sm-8">
+                                    <button class="btn btn-success btn-rounded btn-fw btn-lg"
+                                        (click)="search()">Search</button>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
+                <div class="row">
+                    <h4 class="card-title" style="color: crimson ; font-size: xx-large;font-family: Georgia, 'Times New Roman', Times, serif;">List of Inscriptions</h4>
+                </div><br><br><br>
+                <div class="row">
+                    <div class="form-group row">
+                        <div class="col-sm-25">
+                            <button class="btn btn-success btn-rounded btn-fw btn-lg" (click)="Sort()">sort ASC</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                <input type="text" class="form-control search-input mx-auto" placeholder="Search" [(ngModel)]="searchTerm">
+                </div>
+                <div class="row">
+                    <div class="card">
+                        <div class="card-body">
+                            <div class="row">
+                                <div class="col-sm-4 stretch-card grid-margin"
+                                    *ngFor="let c of ListInscriptions | paginate: { itemsPerPage: 3 , currentPage: p } , let i=index">
+
+                                    <div *ngIf="c.user.firstName.toLowerCase().includes(searchTerm.toLowerCase()) 
+                                        || c.user.lastName.toLowerCase().includes(searchTerm.toLowerCase()) 
+                                        || c.user.firstName.toLowerCase().includes(searchTerm.toLowerCase()) 
+                                        || c.user.email.toLowerCase().includes(searchTerm.toLowerCase()) 
+                                        || c.user.nationality.toLowerCase().includes(searchTerm.toLowerCase())" >
+
+                                        <div class="card">
+                                            <div class="card-body p-3">
+                                                <div class="d-flex text-sm mt-3">
+                                                    <div class="avatar avatar-xl bg-gradient-dark border-radius-md p-2">
+                                                        <img style="width: 70%;" src="../../../assets/Front/img/logos/small-logos/logo-invision.svg">
+                                                    </div>
+                                                    <div class="ms-3 my-auto">
+                                                        <h6>Inscription Type : {{ c.offer.offerType }} </h6>
+                                                    </div>
+                                                </div>
+                                                <h6 class="text-sm mt-3"> Condidat Informations :
+                                                </h6>
+                                                <p class="text-sm mt-3"> LAST NAME : {{ c.user. lastName }}
+                                                </p>
+                                                <p class="text-sm mt-3"> FIRST NAME : {{ c.user.firstName }}
+                                                </p>
+                                                <p class="text-sm mt-3"> Start date : {{ c.dateInscription | date: 'dd/MM/yyyy' }}
+                                                </p>
+                                                <p class="text-sm mt-3"> EMAIL : {{ c.user.email }}
+                                                </p>
+                                                <p class="text-sm mt-3"> NATIONALITY : {{ c.user.nationality }}
+                                                </p>
+                                                
+                                                <hr class="horizontal dark">
+                                                <div class="row">
+                                                    <div class="col-6">
+                                                        <h6 class="text-sm mb-0"></h6>
+                                                    </div>
+                                                    <div class="col-6 text-end">
+                                                        <a class="text-sm mb-0" type="button" >View details</a>
+                                                        <!-- <p class="text-secondary text-sm font-weight-bold mb-0">{{+1}}</p> -->
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+                <div class="mt-8 py-5 d-flex justify-content-center align-items-center">
+                    <div class="text-center">
+                        <pagination-controls (pageChange)="p = $event"></pagination-controls>
+                    </div>
+                </div>
             </div>
         </div>
+    </div>
 </div>
+ 

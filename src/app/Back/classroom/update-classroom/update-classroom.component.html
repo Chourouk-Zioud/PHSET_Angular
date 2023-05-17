@@ -12,7 +12,8 @@
     <!-- partial:partials/_sidebar.html -->
     <nav class="sidebar sidebar-offcanvas" id="sidebar">
         <ul class="nav">
-            <app-home-back></app-home-back>
+          <app-nav-bar-back></app-nav-bar-back>
+          <app-side-nav-bar></app-side-nav-bar> 
         </ul>
     </nav>
     <!-- partial -->
@@ -68,7 +69,7 @@
                 <div class="col-12 grid-margin stretch-card">
                     <div class="card">
                       <div class="card-body">
-                        <h4 class="card-title">Update Classroom</h4><br>
+                        <h4 class="card-title" style="color: crimson ; font-size: xx-large;font-family: Georgia, 'Times New Roman', Times, serif;">Update Classroom</h4><br>
                         <form #f="ngForm" class="forms-sample">
                            <div class="form-group"> <!--name="passeport" [(ngModel)]="inscription.user.passeport" -->
                             <label for="exampleInputName1">Name Class</label>

@@ -116,6 +116,10 @@ import { UpdateClassroomComponent } from './Back/classroom/update-classroom/upda
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { TestComponent } from './Front/test/test.component';
 import { AlternanceComponent } from './Front/admission/alternance/alternance.component';
+import { ConsultIntCondidatItemComponent } from './Front/consult-int-condidat-item/consult-int-condidat-item.component';
+import { SideNavBarComponent } from './Back/side-nav-bar/side-nav-bar.component';
+import { TestBackComponent } from './Back/test-back/test-back.component';
+import { AddTrainingBackComponent } from './Back/add-training-back/add-training-back.component';
 
 
 @NgModule({
@@ -231,6 +235,10 @@ import { AlternanceComponent } from './Front/admission/alternance/alternance.com
     UpdateClassroomComponent,
     TestComponent,
     AlternanceComponent,
+    ConsultIntCondidatItemComponent,
+    SideNavBarComponent,
+    TestBackComponent,
+    AddTrainingBackComponent
   ],
   imports: [
     HttpClientModule,

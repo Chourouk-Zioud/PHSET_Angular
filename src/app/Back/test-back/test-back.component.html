@@ -1,0 +1,109 @@
+<app-nav-bar-back></app-nav-bar-back>
+<div class="container-scroller">
+    <app-side-nav-bar></app-side-nav-bar>
+
+
+    <div class="main-panel">
+        <div class="content-wrapper">
+            <div class="row">
+                <div class="row">
+                    <div class="col-lg-10 grid-margin stretch-card">
+                        <div class="col-md-4">
+                            <div class="form-group row">
+                                <label class="col-sm-3 col-form-label">Date</label>
+                                <div class="col-sm-8">
+                                    <input type="date" class="form-control" [(ngModel)]="date"
+                                        (ngModelChange)="formatDate($event)" />
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-3 offset-md-5">
+                            <div class="form-group row">
+                                <label class="col-sm-3 col-form-label">Type </label>
+                                <div class="col-sm-7">
+                                    <select class="form-control row" id="object" name="object" [(ngModel)]="object">
+                                        <option value="Job">Job</option>
+                                        <option value="Admission">Admission</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <div class="form-group row">
+                                <div class="col-sm-8">
+                                    <button class="btn btn-success btn-rounded btn-fw btn-lg"
+                                        (click)="search()">Search</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <h4 class="card-title" style="color: crimson ; font-size: xx-large;font-family: Georgia, 'Times New Roman', Times, serif;">FAQ Questions:</h4>
+                </div><br><br><br>
+                <div class="row">
+                    <div class="form-group row">
+                        <div class="col-sm-25">
+                            <button class="btn btn-success btn-rounded btn-fw btn-lg" (click)="Sort()">sort New</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                <input type="text" class="form-control search-input mx-auto" placeholder="Search" [(ngModel)]="searchTerm">
+                </div>
+                <div class="row">
+                    <div class="card">
+                        <div class="card-body">
+                            <div class="row">
+                                <div class="col-sm-4 stretch-card grid-margin"
+                                    *ngFor="let c of ListQuestion | paginate: { itemsPerPage: 3 , currentPage: p } , let i=index">
+
+                                    <div *ngIf="c.textQuestion.toLowerCase().includes(searchTerm.toLowerCase()) 
+                                        || c.reponseFAQ.nameReponseFAQ.toLowerCase().includes(searchTerm.toLowerCase())" >
+
+                                        <div class="card">
+                                            <div class="card-body p-3">
+                                                <div class="d-flex text-sm mt-3">
+                                                    <div class="avatar avatar-xl bg-gradient-dark border-radius-md p-2">
+                                                        <img style="width: 70%;" src="../../../assets/Front/img/logos/small-logos/logo-xd.png">
+                                                    </div>
+                                                    <div class="ms-3 my-auto">
+                                                        <h6>Question Number : {{ c.idFAQ }} </h6>
+                                                    </div>
+                                                </div>
+                                                <p class="text-sm mt-3"> <strong>Question :</strong> {{ c.textQuestion }}
+                                                </p>
+                                                <p class="text-sm mt-3"> <strong>Response :</strong> {{ c.reponseFAQ.nameReponseFAQ }}
+                                                </p>
+                                                
+                                                <hr class="horizontal dark">
+                                                <div class="row">
+                                                    <div class="col-6">
+                                                        <h6 class="text-sm mb-0"></h6>
+                                                    </div>
+                                                    <div class="col-6 text-end">
+                                                        <a class="text-sm mb-0" type="button" >View details</a>
+                                                        <!-- <p class="text-secondary text-sm font-weight-bold mb-0">{{+1}}</p> -->
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+                <div class="mt-8 py-5 d-flex justify-content-center align-items-center">
+                    <div class="text-center">
+                        <pagination-controls (pageChange)="p = $event"></pagination-controls>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+ 

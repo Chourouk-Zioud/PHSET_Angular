@@ -1,205 +1,71 @@
 <app-nav-bar></app-nav-bar>
-<head>
-  <link href="/assets/Front/css/1.css" rel="stylesheet" />
-  <link href="/assets/Front/css/2.css" rel="stylesheet" />
-  <link href="/assets/Front/css/3.css" rel="stylesheet" />
-  <link href="/assets/Front/css/4.css" rel="stylesheet" />
-  <link href="/assets/Front/css/5.css?" rel="stylesheet" />
-  <link href="/assets/Front/css/6.css" rel="stylesheet" />
-  <link href="/assets/Front/css/7.css?" rel="stylesheet" />
-</head>
-
-
-
-<div class="region region-highlighted">
-    <div id="block-campussearchfaq" class="block block-campus-search block-campus-search-faq">
-        <h1 class="title" style="color: white;">La FAQ d'ESPRIT</h1>
-        <div class="under-title">Comment pouvons nous vous aider ?
+<header class="header-2">
+  <div class="page-header min-vh-75 relative" style="
+      background-image: url('../../assets/Front/img/faq.png');
+    ">
+    <div class="container">
+      <br /><br /><br /><br />
+      <div class="row">
+        <div class="text-center mx-auto">
+          <h1 class="text-center pt-3 mt-n5" style="font-family: fantasy">
+          </h1>
         </div>
-        <form class="campus-search-faq-form" data-drupal-selector="campus-search-faq-form" role="search" action="https://www.campusfrance.org/fr/faq/public/chercheurs-3/theme/341/theme/choose-france-828/theme/sante-370" method="get" id="campus-search-faq-form" accept-charset="UTF-8">
-            <div
-                class="js-form-item form-item js-form-type-search form-type-search js-form-item-text form-item-text"
-            >
-                <label for="edit-text--2">Rechercher</label>
-                <input
-                placeholder="Entrez un mot clé ici"
-                data-drupal-selector="edit-text"
-                type="search"
-                id="edit-text--2"
-                name="text"
-                value=""
-                size="60"
-                maxlength="128"
-                class="form-search"
-                />
-            </div>
-            <div data-drupal-selector="ows-edit-actions" class="form-actions js-form-wrapper form-wrapper" id="ows-edit-actions">
-                <input data-drupal-selector="ows-edit-submit" type="submit"
-                id="ows-edit-submit"
-                value="Rechercher"
-                class="button js-form-submit form-submit"
-                />
-            </div>
-        </form>
+      </div>
     </div>
-</div>
 
-
-<div class="region region-help">
-    <div class="sidebar-main-container">
-        <aside class="layout-sidebar" role="complementary">
-        <div class="region region-sidebar">
-            <div class="mobile-search">
-                <p>Affiner</p>
-            </div>
-            <div class="facet-active block-facet--links block block-facets block-facet-blocktheme-faq" id="block-theme-faq">
-                <h2 style="background-color: #F31111;">Thème</h2>
-                <div class="facets-widget-links">
-                <ul data-drupal-facet-id="theme_faq" data-drupal-facet-alias="theme" class="facet-active js-facets-links item-list__links js-facets-widget" >
-                    <!-- <li class="facet-item" *ngFor="let t of [1,2,3],let p=index"> -->
-                    <li class="facet-item" >
-                        <!-- <app-topic [topic]="t" (viewTopics)="viewTopics($event)"></app-topic> -->
-                        <a href="" rel="nofollow" data-drupal-facet-item-id="theme-346" data-drupal-facet-item-value="346" data-drupal-facet-item-count="7">
-                            <span class="facet-item__value" style="color: black;">
-                                Bourse et Financement
-                            </span>
-                        </a>
-                    </li>
-                    <li class="facet-item" >
-                        <!-- <app-topic [topic]="t" (viewTopics)="viewTopics($event)"></app-topic> -->
-                        <a href="" rel="nofollow" data-drupal-facet-item-id="theme-346" data-drupal-facet-item-value="346" data-drupal-facet-item-count="7">
-                            <span class="facet-item__value" style="color: black;">
-                                Demarches administratives
-                            </span>
-                        </a>
-                    </li>
-                    <li class="facet-item" >
-                        <!-- <app-topic [topic]="t" (viewTopics)="viewTopics($event)"></app-topic> -->
-                        <a href="" rel="nofollow" data-drupal-facet-item-id="theme-346" data-drupal-facet-item-value="346" data-drupal-facet-item-count="7">
-                            <span class="facet-item__value" style="color: black;">
-                                Diplomes
-                            </span>
-                        </a>
-                    </li>
-                </ul>
-                </div>
-            </div>
-        </div>
-        </aside>
-        <main role="main">
-            <a id="main-content" tabindex="-1"></a>
-            <div class="layout-content">
-                <div class="region region-content">
-                    <div data-drupal-messages-fallback="" class="hidden"></div>
-                    <div id="block-campus-content" class="block block-system block-system-main-block">
-                        <div class="views-element-container">
-                            <div class="view view-faq view-id-faq view-display-id-recherche_faq js-view-dom-id-4a63c10ecc4954a6d4e67a4d6a50d5712223a47b8edffe30bfc81a5a8ccc0364">
-                                <div class="view-content">
-                                    <!-- <div class="views-row" *ngFor="let q of [1,2],let p=index"> -->
-                                    <div class="views-row">
-                                        <!-- <app-question-faq></app-question-faq> -->
-                                        <article role="article" about="" class="node node--type-faq node--view-mode-search-result">
-                                            <a href="./reponseFAQ" rel="bookmark">
-                                                <div class="node__content">
-                                                    <div class="left">
-                                                        <div class="field field--name-field-publics-cibles field--type-entity-reference field--label-hidden field__items" >
-                                                            <div class="field__item" style="color: black;">Student 
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                    <div class="right">
-                                                        <div class="top" style="background-color: #EB2F2F;">
-                                                            <div style="background-color: #F87777;">Question</div>
-                                                            <div style="background-color: #EB2F2F;" class="field field--name-field-question field--type-string-long field--label-hidden field__item">
-                                                                <span>#COVID-19 : Comment préparer ma rentrée 2021 en France ?
-                                                                </span>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </a>
-                                        </article>
-                                    </div>
-                                    <div class="views-row">
-                                        <!-- <app-question-faq></app-question-faq> -->
-                                        <article role="article"  class="node node--type-faq node--view-mode-search-result">
-                                            <a href="" rel="bookmark">
-                                                <div class="node__content">
-                                                    <div class="left">
-                                                        <div class="field field--name-field-publics-cibles field--type-entity-reference field--label-hidden field__items" >
-                                                            <div class="field__item" style="color: black;">Student 
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                    <div class="right">
-                                                        <div class="top" style="background-color: #EB2F2F;">
-                                                            <div style="background-color: #F87777;">Question</div>
-                                                            <div style="background-color: #EB2F2F;" class="field field--name-field-question field--type-string-long field--label-hidden field__item">
-                                                                <span>#Quels sont les critères d’admission ?
-                                                                </span>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </a>
-                                        </article>
-                                    </div>
-                                    <div class="views-row">
-                                        <!-- <app-question-faq></app-question-faq> -->
-                                        <article role="article"  class="node node--type-faq node--view-mode-search-result">
-                                            <a href="" rel="bookmark" >
-                                                <div class="node__content">
-                                                    <div class="left">
-                                                        <div class="field field--name-field-publics-cibles field--type-entity-reference field--label-hidden field__items" >
-                                                            <div class="field__item" style="color: black;">Student 
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                    <div class="right">
-                                                        <div class="top" style="background-color: #EB2F2F;">
-                                                            <div style="background-color: #F87777;">Question</div>
-                                                            <div style="background-color: #EB2F2F;" class="field field--name-field-question field--type-string-long field--label-hidden field__item">
-                                                                <span>#Quelles sont les dates de l’année universitaire ?
-                                                                </span>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </a>
-                                        </article>
-                                    </div>
-                                    <div class="views-row">
-                                        <!-- <app-question-faq></app-question-faq> -->
-                                        <article role="article" class="node node--type-faq node--view-mode-search-result">
-                                            <a href="" rel="bookmark">
-                                                <div class="node__content">
-                                                    <div class="left">
-                                                        <div class="field field--name-field-publics-cibles field--type-entity-reference field--label-hidden field__items" >
-                                                            <div class="field__item" style="color: black;">Student 
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                    <div class="right">
-                                                        <div class="top" style="background-color: #EB2F2F;">
-                                                            <div style="background-color: #F87777;">Question</div>
-                                                            <div style="background-color: #EB2F2F;" class="field field--name-field-question field--type-string-long field--label-hidden field__item">
-                                                                <span>#Combien coûtent les études en Tunisie ?
-                                                                </span>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </a>
-                                        </article>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </main>
+    <div class="position-absolute w-100 z-index-1 bottom-0">
+      <svg class="waves" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+        viewBox="0 24 150 40" preserveAspectRatio="none" shape-rendering="auto">
+        <defs>
+          <path id="gentle-wave" d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z" />
+        </defs>
+        <g class="moving-waves">
+          <use xlink:href="#gentle-wave" x="48" y="-1" fill="rgba(255,255,255,0.40" />
+          <use xlink:href="#gentle-wave" x="48" y="3" fill="rgba(255,255,255,0.35)" />
+          <use xlink:href="#gentle-wave" x="48" y="5" fill="rgba(255,255,255,0.25)" />
+          <use xlink:href="#gentle-wave" x="48" y="8" fill="rgba(255,255,255,0.20)" />
+          <use xlink:href="#gentle-wave" x="48" y="13" fill="rgba(255,255,255,0.15)" />
+          <use xlink:href="#gentle-wave" x="48" y="16" fill="rgba(255,255,255,0.95" />
+        </g>
+      </svg>
     </div>
-</div>
+  </div>
+</header>
+
 <br><br><br>
+
+
+<section class="py-4">
+  <div class="container">
+    <div class="row my-5">
+      <div class="col-md-6 mx-auto text-center">
+        <h2>Frequently Asked Questions</h2>
+        <p>A lot of people don&#39;t appreciate the moment until it’s passed. I&#39;m not trying my hardest, and I&#39;m not trying to do </p>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-10 mx-auto" *ngFor="let q of ListeQuestion">
+        <div class="accordion" id="accordionRental">
+          <div class="accordion-item mb-3">
+            <h5 class="accordion-header" [id]="'headingOne'+q.idFAQ">
+              <button class="accordion-button border-bottom font-weight-bold" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                {{ q.textQuestion }}
+                <i class="collapse-close fa fa-plus text-xs pt-1 position-absolute end-0 me-3"></i>
+                <i class="collapse-open fa fa-minus text-xs pt-1 position-absolute end-0 me-3"></i>
+              </button>
+            </h5>
+            <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionRental">
+              <div class="accordion-body text-sm opacity-8 text-dark" >
+                {{ q.reponseFAQ.nameReponseFAQ }}
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<app-chat-bot></app-chat-bot>
+<br><br><br><br><br><br><br>
 <app-footer></app-footer>

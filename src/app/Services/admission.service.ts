@@ -1,10 +1,11 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { Observable } from 'rxjs';
+import { Observable, switchMap } from 'rxjs';
 import { Interview } from '../Models/Interview';
 import { Inscription } from '../Models/Inscription';
 import { Offer } from '../Models/Offer';
 import { Classroom } from '../Models/Classroom';
+import { TypeGrid } from '../Models/TypeGrid';
 
 @Injectable({
   providedIn: 'root',
@@ -43,17 +44,100 @@ export class AdmissionService {
     );
   }
 
-  newAdmission(inscription: Inscription, id: number) {
+  newAdmissionTN(inscription: Inscription, idOffer: number, idAccount: number) {
     return this.http.post(
-      this.URL + '/addInscriptionWithUserAndAssignOffer/' + id,
+      this.URL +
+        '/addInscriptionTNWithUserAndAssignOffer/' +
+        idOffer +
+        '/' +
+        idAccount,
       inscription
     );
   }
 
-  setFile(file: File) {
+  newAdmissionALT(
+    inscription: Inscription,
+    idOffer: number,
+    idAccount: number
+  ) {
+    return this.http.post(
+      this.URL +
+        '/addInscriptionALTWithUserAndAssignOffer/' +
+        idOffer +
+        '/' +
+        idAccount,
+      inscription
+    );
+  }
+
+  newAdmissionINT(
+    inscription: Inscription,
+    idOffer: number,
+    idAccount: number
+  ) {
+    return this.http.post(
+      this.URL +
+        '/addInscriptionINTWithUserAndAssignOffer/' +
+        idOffer +
+        '/' +
+        idAccount,
+      inscription
+    );
+  }
+
+  newAdmissionNIGHT(
+    inscription: Inscription,
+    idOffer: number,
+    idAccount: number
+  ) {
+    return this.http.post(
+      this.URL +
+        '/addInscriptionNIGHTWithUserAndAssignOffer/' +
+        idOffer +
+        '/' +
+        idAccount,
+      inscription
+    );
+  }
+
+  newApply(inscription: Inscription, idOffer: number, idAccount: number) {
+    return this.http.post(
+      this.URL +
+        '/addInscriptionJOBWithUserAndAssignOffer/' +
+        idOffer +
+        '/' +
+        idAccount,
+      inscription
+    );
+  }
+
+  newApplyFile(
+    inscription: Inscription,
+    idOffer: number,
+    idAccount: number,
+    cv: File,
+    lm: File
+  ) {
+    const cvformData = new FormData();
+    const lmformData = new FormData();
+    cvformData.append('cv', cv);
+    lmformData.append('lm', lm);
+    return this.http.post(
+      this.URL + '/addInscriptionWithCVAndLM/' + idOffer + '/' + idAccount,
+      inscription
+    );
+  }
+
+  setCV(file: File) {
     const formData = new FormData();
-    formData.append('file', file);
-    return this.http.put(this.URL + '/setFileUser', formData);
+    formData.append('cv', file);
+    return this.http.put(this.URL + '/setCVUser', formData);
+  }
+
+  setLM(file: File) {
+    const formData = new FormData();
+    formData.append('lm', file);
+    return this.http.put(this.URL + '/setLMUser', formData);
   }
 
   getInterviewById(id: number): Observable<Interview> {
@@ -87,6 +171,22 @@ export class AdmissionService {
   retrieveInterviewByCurrentUser(id: number): Observable<Interview[]> {
     return this.http.get<Interview[]>(
       this.URL + '/retrieveInterviewByCurrentUser/' + id
+    );
+  }
+
+  Sort() {
+    return this.http.get<Inscription[]>(this.URL + '/getAllInscriptionAsc');
+  }
+
+  searchByType(type: String) {
+    return this.http.get<Inscription[]>(
+      this.URL + '/getInscriptionByOffer_OfferType/' + type
+    );
+  }
+
+  searchByDate(date: Date) {
+    return this.http.get<Inscription[]>(
+      this.URL + '/getInscriptionByDateInscription/' + date
     );
   }
 }

@@ -86,11 +86,13 @@ import { AddClassroomComponent } from './Back/classroom/add-classroom/add-classr
 import { UpdateClassroomComponent } from './Back/classroom/update-classroom/update-classroom.component';
 import { TestComponent } from './Front/test/test.component';
 import { AlternanceComponent } from './Front/admission/alternance/alternance.component';
+import { TestBackComponent } from './Back/test-back/test-back.component';
 
 
 const routes: Routes = [
   { path: 'home', component: PageAcceuilKaisComponent },
   { path: 'test', component: TestComponent },
+  { path: 'testBack', component: TestBackComponent },
   { path: 'training', component: TrainingComponent },
   { path: 'alternance', component: AlternanceComponent },
   { path: 'addTraining', component: AddTrainingComponent },

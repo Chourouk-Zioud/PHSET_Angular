@@ -41,11 +41,7 @@ export class AddForeignComponent implements OnInit {
   }
   
   onSumbit(){
-    this.service.newAdmission(this.inscription,1).subscribe();
-    if(this.cv!=null && this.lm!=null){
-      this.service.setFile(this.cv).subscribe();
-      this.service.setFile(this.lm).subscribe();
-    }
+    this.service.newAdmissionINT(this.inscription,1,2).subscribe();
   }
   
   onCvSelected(event: any){

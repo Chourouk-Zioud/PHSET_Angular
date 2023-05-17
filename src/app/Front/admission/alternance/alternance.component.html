@@ -7,15 +7,7 @@
             <div class="row">
                 <div class="col-lg-11 mx-auto text-white text-center">
                     <div class="bg-gradient">
-                        <br>
-                        <br>
-                        <br>
-                        <br>
-                        <br>
-                        <br>
-                        <br>
-                        <br>
-                        <br>
+                        <br><br><br><br><br><br><br><br><br>
                         <h2 class="text-dark "></h2>
                     </div>
                 </div>
@@ -231,162 +223,159 @@
                                                             <!----------------------------------------------------------------------->
                                                             <div class="row">
                                                                 <div class="col-md-6">
-                                                                    <label for="nom">Nom :</label>
-                                                                    <div class="input-group mb-4">
-                                                                    <input class="form-control" placeholder="Nom" aria-label="Nom" type="text" id="nom" name="nom"
+                                                                <label for="nom">First Name :</label>
+                                                                <div class="input-group mb-4">
+                                                                    <input class="form-control" placeholder="Nom" aria-label="firstName" type="text" id="firstName" name="firstName"
                                                                     [(ngModel)]="inscription.user.firstName" required minlength="3">
-                                                                    </div>
+                                                                </div>
                                                                 </div>
                                                                 <div class="col-md-6 ps-2">
-                                                                    <label>Prénom</label>
+                                                                <label>Last Name</label>
                                                                     <div class="input-group mb-4">
-                                                                        <input class="form-control" placeholder="prenom" aria-label="prenom" type="text" name="prenom"
+                                                                    <input class="form-control" placeholder="lastName" aria-label="lastName" type="text" id="lastName" name="lastName"
                                                                         [(ngModel)]="inscription.user.lastName">
                                                                     </div>
                                                                 </div>
                                                             </div>
                                                             <!----------------------------------------------------------------------->
                                                             <div class="row">
-                                                            <div class="col-md-6">
+                                                                <div class="col-md-6">
                                                                 <label>Email</label>
-                                                                <div class="input-group">
-                                                                    <input type="email" id="email" name="email" class="form-control" placeholder="xxxxx.xxxxx@xxxx.xxx"
-                                                                    [(ngModel)]="inscription.user.email" required pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$">
+                                                                    <div class="input-group">
+                                                                    <input class="form-control" placeholder="xxxxx.xxxxx@xxxx.xxx" aria-label="email" type="email" id="email" name="email" 
+                                                                        [(ngModel)]="inscription.user.email" required pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$">
+                                                                    </div>
                                                                 </div>
-                                                            </div>
-                                                            <div class="col-md-6 ps-2">
-                                                                <label>Confirmer Email</label>
+                                                                <div class="col-md-6 ps-2">
+                                                                <label>Confirm Email</label>
                                                                 <div class="input-group">
-                                                                <input name="ConfirmEmail" [(ngModel)]="inscription.user.Confirmemail" #email="ngModel" class="form-control"
+                                                                    <input name="ConfirmEmail" [(ngModel)]="inscription.user.Confirmemail" #email="ngModel" class="form-control"
                                                                     placeholder="Confirmer Email" aria-label="Confirmer Email" type="email" compare="email" />
                                                                     <div *ngIf="email.errors && (email.dirty || email.touched)">
-                                                                    Les adresses e-mail ne correspondent pas.</div>
+                                                                        Les adresses e-mail ne correspondent pas.
+                                                                    </div>
                                                                 </div>
-                                                            </div>
+                                                                </div>
                                                             </div>
                                                             <!----------------------------------------------------------------------->
                                                             <div class="row">
-                                                            <div class="col-md-6">
-                                                                <label>Civilité</label>
+                                                                <div class="col-md-6">
+                                                                <label>Civility</label>
                                                                 <div class="input-group mb-4">
-                                                                <div class="row form-inline">
+                                                                    <div class="row form-inline">
                                                                     <div class="form-check">
-                                                                    <input name="Civilité" [(ngModel)]="inscription.user.civility" #Civilité="ngModel" class="form-check-input"
+                                                                        <input name="Civilité" [(ngModel)]="inscription.user.civility" #Civilité="ngModel" class="form-check-input"
                                                                         type="radio" name="Civilité" id="Civilité1" />
-                                                                    <label class="form-check-label" for="Civilité">Mr</label>
+                                                                        <label class="form-check-label" for="Civilité">Mr</label>
                                                                     </div>
                                                                     <div class="form-check">
-                                                                    <input name="Civilité" [(ngModel)]="inscription.user.civility" #Civilité="ngModel" class="form-check-input"
+                                                                        <input name="Civilité" [(ngModel)]="inscription.user.civility" #Civilité="ngModel" class="form-check-input"
                                                                         type="radio" name="Civilité" id="Civilité2" />
-                                                                    <label class="form-check-label" for="Civilité">Mme</label>
+                                                                        <label class="form-check-label" for="Civilité">Mme</label>
                                                                     </div>
                                                                     <div class="form-check">
-                                                                    <input name="Civilité" [(ngModel)]="inscription.user.civility" #Civilité="ngModel" class="form-check-input"
+                                                                        <input name="Civilité" [(ngModel)]="inscription.user.civility" #Civilité="ngModel" class="form-check-input"
                                                                         type="radio" name="Civilité" id="Civilité3" />
-                                                                    <label class="form-check-label" for="Civilité">Mlle</label>
+                                                                        <label class="form-check-label" for="Civilité">Miss</label>
+                                                                    </div>
                                                                     </div>
                                                                 </div>
                                                                 </div>
-                                                            </div>
-                                                            <div class="col-md-6 ps-2">
-                                                                <label>Date de naissance</label>
+                                                                <div class="col-md-6 ps-2">
+                                                                <label>Birth Date</label>
                                                                 <div class="input-group">
-                                                                <input name="BD" [(ngModel)]="inscription.user.birthDate" #birthDate="ngModel" type="date"
-                                                                    required />
+                                                                    <input aria-label="birthDate" type="date" id="birthDate" name="birthDate" [(ngModel)]="inscription.user.birthDate" required />
                                                                 </div>
-                                                            </div>
-                                                            </div>
+                                                                </div>
+                                                            </div> 
                                                             <!----------------------------------------------------------------------->
                                                             <div class="row">
-                                                            <div class="col-md-6">
+                                                                <div class="col-md-6">
                                                                 <label>CIN</label>
                                                                 <div class="input-group mb-4">
-                                                                <input class="form-control" aria-label="CIN" type="text" name="cin" [(ngModel)]="inscription.user.cin"
+                                                                    <input class="form-control" placeholder="cin" aria-label="cin" id="cin" type="text" name="cin" [(ngModel)]="inscription.user.cin"
                                                                     pattern="[0-9]{8}">
                                                                 </div>
-                                                            </div>
-                                                            <div class="col-md-6 ps-2">
-                                                                <label>Lieu de Naissance</label>
-                                                                <div class="input-group">
-                                                                <input class="form-control" placeholder="Lieu de Naissance" aria-label="Lieu de Naissance"
-                                                                    type="text" name="lieuNaissance" [(ngModel)]="inscription.user.LieudeNaissance" required>
                                                                 </div>
-                                                            </div>
+                                                                <div class="col-md-6 ps-2">
+                                                                <label>Place of birth</label>
+                                                                <div class="input-group">
+                                                                    <input class="form-control" placeholder="Place of birth" aria-label="LieudeNaissance" type="text" id="LieudeNaissance" name="LieudeNaissance"
+                                                                    [(ngModel)]="inscription.user.LieudeNaissance" required>
+                                                                </div>
+                                                                </div>
                                                             </div>
                                                             <!----------------------------------------------------------------------->
                                                             <div class="row">
-                                                            <div class="col-md-6">
+                                                                <div class="col-md-6">
                                                                 <label>Gouvernorat</label>
                                                                 <div class="input-group mb-4">
-                                                                <select class="form-control" [(ngModel)]="inscription.user.Gouvernorat">
-                                                                    <option value="Tunis"> Tunis</option>
-                                                                    <option value="Ben Arous"> Ben Arous</option>
+                                                                    <select class="form-control" aria-label="address" type="text" id="address" name="address" [(ngModel)]="inscription.user.address">
                                                                     <option value="Ariana"> Ariana</option>
-                                                                    <option value="Manouba"> Manouba</option>
-                                                                    <option value="Nabeul"> Nabeul</option>
-                                                                    <option value="Zaghouan"> Zaghouan</option>
-                                                                    <option value="Bizerte"> Bizerte</option>
                                                                     <option value="Béja"> Béja</option>
+                                                                    <option value="Ben Arous"> Ben Arous</option>
+                                                                    <option value="Bizerte"> Bizerte</option>
+                                                                    <option value="Gabès"> Gabès</option>
                                                                     <option value="Jendouba"> Jendouba</option>
-                                                                    <option value="Le Kef"> Le Kef</option>
-                                                                    <option value="Siliana"> Siliana</option>
                                                                     <option value="Kairouan"> Kairouan</option>
                                                                     <option value="Kasserine"> Kasserine</option>
+                                                                    <option value="Kebili"> Kebili</option>
+                                                                    <option value="Le Kef"> Le Kef</option>
+                                                                    <option value="Mahdia"> Mahdia</option>
+                                                                    <option value="Manouba"> Manouba</option>
+                                                                    <option value="Medenine"> Medenine</option>
+                                                                    <option value="Monastir"> Monastir</option>
+                                                                    <option value="Nabeul"> Nabeul</option>
+                                                                    <option value="Sfax"> Sfax</option>
+                                                                    <option value="Siliana"> Siliana</option>
                                                                     <option value="Sidi Bouzid"> Sidi Bouzid</option>
                                                                     <option value="Sousse"> Sousse</option>
-                                                                    <option value="Monastir"> Monastir</option>
-                                                                    <option value="Mahdia"> Mahdia</option>
-                                                                    <option value="Sfax"> Sfax</option>
-                                                                    <option value="Gabès"> Gabès</option>
-                                                                    <option value="Medenine"> Medenine</option>
                                                                     <option value="Tataouine"> Tataouine</option>
                                                                     <option value="Tozeur"> Tozeur</option>
-                                                                    <option value="Kebili"> Kebili</option>
-                                                                    <option value="Etranger"> test </option>
-
-                                                                </select>
+                                                                    <option value="Tunis"> Tunis</option>
+                                                                    <option value="Zaghouan"> Zaghouan</option>
+                                                                    </select>
                                                                 </div>
-                                                            </div>
-                                                            <div class="col-md-6">
-                                                                <label>Num Téléphone</label>
+                                                                </div>
+                                                                <div class="col-md-6">
+                                                                <label>Phone Number</label>
                                                                 <div class="input-group mb-4">
-                                                                <input class="form-control" aria-label="Num Téléphone" [(ngModel)]="inscription.user.phone"
-                                                                    type="text">
+                                                                    <input class="form-control" aria-label="phone" type="number" id="phone" name="phone"  [(ngModel)]="inscription.user.phone">
                                                                 </div>
-                                                            </div>
+                                                                </div>
                                                             </div>
                                                             <!----------------------------------------------------------------------->
                                                             <div class="row">
-                                                            <div class="col-md-6">
-                                                                <label>Diplôme du baccalauréat</label>
-                                                                <div class="input-group mb-4">
-                                                                <div class="form-check form-check-inline">
-                                                                    <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1"
-                                                                    [checked]="!enCours" />
-                                                                    <label class="form-check-label" for="flexRadioDefault1">Déjà obtenu</label>
+                                                                <div class="col-md-6">
+                                                                <label>Diploma of the Baccalaureate</label>
+                                                                    <div class="input-group mb-4">
+                                                                    <div class="form-check form-check-inline">
+                                                                        <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1"
+                                                                        checked />
+                                                                        <label class="form-check-label" for="flexRadioDefault1">Already obtained</label>
+                                                                    </div>
+                                                                    <div class="form-check form-check-inline">
+                                                                        <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2"
+                                                                        disabled />
+                                                                        <label class="form-check-label" for="flexRadioDefault2">In progress</label>
+                                                                    </div>
+                                                                    </div>
                                                                 </div>
-                                                                <div class="form-check form-check-inline">
-                                                                    <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2"
-                                                                    [checked]="enCours" />
-                                                                    <label class="form-check-label" for="flexRadioDefault2">En cours</label>
-                                                                </div>
-                                                                </div>
-                                                            </div>
-                                                            <div class="col-md-6 ps-2">
-                                                                <label>Cours Jour / Cours Soir</label>
+                                                                <div class="col-md-6 ps-2">
+                                                                <label>Day classes / Evening classes</label>
                                                                 <div class="input-group">
-                                                                <div class="form-check form-check-inline">
+                                                                    <div class="form-check form-check-inline">
                                                                     <input class="form-check-input" type="radio" name="flexRadioDefault2" id="flexRadioDefault3"
-                                                                    disabled checked />
-                                                                    <label class="form-check-label" for="flexRadioDefault3">Cours Jour</label>
-                                                                </div>
-                                                                <div class="form-check form-check-inline">
+                                                                        disabled checked />
+                                                                    <label class="form-check-label" for="flexRadioDefault3">Day classes</label>
+                                                                    </div>
+                                                                    <div class="form-check form-check-inline">
                                                                     <input class="form-check-input" type="radio" name="flexRadioDefault2" id="flexRadioDefault4"
-                                                                    [checked]="!enCours" disabled />
-                                                                    <label class="form-check-label" for="flexRadioDefault4">Cours Soir</label>
+                                                                        disabled />
+                                                                    <label class="form-check-label" for="flexRadioDefault4">Evening classes</label>
+                                                                    </div>
                                                                 </div>
                                                                 </div>
-                                                            </div>
                                                             </div>
                                                             <!----------------------------------------------------------------------->
                                                             <div class="row">

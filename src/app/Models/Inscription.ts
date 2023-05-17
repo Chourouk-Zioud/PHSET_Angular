@@ -1,3 +1,4 @@
+import { Offer } from "./Offer";
 import { User } from "./User";
 
 export class Inscription {
@@ -8,5 +9,5 @@ export class Inscription {
     // coverLetter!:string;
     departProf!:string;
     user!:User;
-
+    offer!: Offer;
 }

@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { RequestTraining } from 'src/app/Models/RequestTraining';
 import { Training } from 'src/app/Models/Training';
 import { FaqService } from 'src/app/Services/faq.service';
 
@@ -9,18 +10,21 @@ import { FaqService } from 'src/app/Services/faq.service';
 })
 export class AddTrainingComponent implements OnInit {
   training: Training = new Training();
+  requestTraining!: RequestTraining;
 
   constructor(private Service: FaqService) {}
 
-  addTraining() {
-    this.Service.addTraining(this.training).subscribe((data) => {
-      console.log(data);
-    });
+  // addTraining() {
+  //   this.Service.addTraining(this.training).subscribe((data) => {
+  //     console.log(data);
+  //   });
+  //}
+
+  ngOnInit(): void {
+    this.requestTraining = new RequestTraining();
   }
 
-  ngOnInit(): void {}
-
   onSubmit() {
-    this.addTraining();
+    this.Service.addRequest(this.requestTraining).subscribe();
   }
 }

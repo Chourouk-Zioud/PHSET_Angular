@@ -1,0 +1,123 @@
+
+
+<div class="container-scroller">
+    <app-nav-bar-back></app-nav-bar-back>
+    <app-side-nav-bar></app-side-nav-bar>
+    <!-- partial -->
+    <div class="main-panel">
+        <div class="content-wrapper pb-0">
+          <div class="page-header flex-wrap">
+            <div class="header-left">
+            </div>
+            <div class="header-right d-flex flex-wrap mt-2 mt-sm-0">
+              <div class="d-flex align-items-center">
+              </div>
+            </div>
+          </div>
+    <div class="container-fluid page-body-wrapper">
+        <!-- partial:partials/_settings-panel.html -->
+        <div id="settings-trigger"><i class="mdi mdi-settings"></i></div>
+        <div id="theme-settings" class="settings-panel">
+            <i class="settings-close mdi mdi-close"></i>
+            <p class="settings-heading">SIDEBAR SKINS</p>
+            <div class="sidebar-bg-options selected" id="sidebar-default-theme">
+                <div class="img-ss rounded-circle bg-light border mr-3"></div>
+            </div>
+            <div class="sidebar-bg-options" id="sidebar-dark-theme">
+                <div class="img-ss rounded-circle bg-dark border mr-3"></div>Dark
+            </div>
+            <p class="settings-heading mt-2">HEADER SKINS</p>
+        </div>
+
+        <nav class="navbar default-layout-navbar col-lg-12 col-12 p-0 fixed-top d-flex flex-row">
+            <div class="navbar-menu-wrapper d-flex align-items-stretch">
+                <button class="navbar-toggler navbar-toggler align-self-center" type="button" data-toggle="minimize">
+                    <span class="mdi mdi-chevron-double-left"></span>
+                </button>
+                <div class="text-center navbar-brand-wrapper d-flex align-items-center justify-content-center">
+                    <a class="navbar-brand brand-logo-mini" href="index.html"><img src="../images/logo-mini.svg"
+                            alt="logo" /></a>
+                </div>
+                <button class="navbar-toggler navbar-toggler-right d-lg-none align-self-center" type="button"
+                    data-toggle="offcanvas">
+                    <span class="mdi mdi-menu"></span>
+                </button>
+            </div>
+        </nav>
+        <!-- partial -->
+        <div class="main-panel">
+            <div class="content-wrapper pb-0">
+
+                <div class="col-12 grid-margin stretch-card">
+                    <div class="card">
+                      <div class="card-body">
+                        <h4 class="center" style="color: crimson ; font-size: xx-large;font-family: Georgia, 'Times New Roman', Times, serif;">Add Training</h4><br>
+                        <form class="forms-sample">
+                          <div class="form-group">
+                            <label for="exampleInputName1">Title Course</label>
+                            <input type="text" class="form-control" id="exampleInputName1" placeholder="Title Training" />
+                          </div>
+                          <div class="form-group">
+                            <label for="exampleTextarea1">Description Course</label>
+                            <textarea
+                              class="form-control"
+                              id="exampleTextarea1"
+                              rows="4"
+                            ></textarea>
+                          </div>
+                          <div class="form-group">
+                            <label for="exampleInputCity1">Credit Course</label>
+                            <input type="number" class="form-control" id="exampleInputCity1" placeholder="" min="0" />
+                          </div>
+                          <div class="form-group">
+                            <label for="exampleInputName1">Course professor</label>
+                            <input type="text" class="form-control" id="exampleInputName1" placeholder="Duration Training" />
+                          </div>
+                          <div class="form-group">
+                            <label for="exampleInputName1">unit</label>
+                            <input type="text" class="form-control" id="exampleInputName1" placeholder="Duration Training" />
+                          </div>
+                          <div class="form-group">
+                            <label for="exampleInputEmail3">Technology</label>
+                            <select class="form-control" id="exampleSelectGender">
+                                <option>Angular</option>
+                                <option>JavaScript</option>
+                                <option>Spring</option>
+                                <option>Python</option>
+                                <option>React</option>
+                                <option>NodeJs</option>
+                                <option>Symfony</option>
+                                <option>PHP</option>
+                                <option>JAVA</option>
+                                
+                              </select>                                         </div>
+                           
+                              
+                              <div class="form-group">
+                                <label for="videoInput">Video</label>
+                                <input type="file" class="form-control-file" id="videoInput" accept="video/*" />
+                              </div>
+                              
+                              <div class="form-group">
+                                <label for="pdfInput">PDF</label>
+                                <input type="file" class="form-control-file" id="pdfInput" accept=".pdf" />
+                              </div>
+                              
+                              <div class="form-group">
+                                <label for="imageInput">Image</label>
+                                <input type="file" class="form-control-file" id="imageInput" accept="image/*" />
+                              </div>
+                              
+                          
+                         
+                          <button type="submit" class="btn btn-danger  mr-2"><i
+                            class="mdi mdi-pen"></i> Submit </button>
+                          <button class="btn btn-danger  " > <i
+                            class="mdi mdi-close-circle-outline"></i>Cancel</button>
+                        </form>
+                      </div>
+                    </div>
+                  </div>
+
+            </div>
+        </div>

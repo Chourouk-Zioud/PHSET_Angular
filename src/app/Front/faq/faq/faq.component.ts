@@ -10,23 +10,18 @@ import { QuestionFAQ } from 'src/app/Models/QuestionFAQ';
   styleUrls: ['./faq.component.css'],
 })
 export class FaqComponent implements OnInit {
-  topics!: Topic[];
-  questions!: QuestionFAQ[];
+  ListeQuestion!: QuestionFAQ[];
 
   constructor(private service: FaqService, private route: ActivatedRoute) {}
 
   ngOnInit(): void {
-    this.service.retrieveAllTopics().subscribe((res) => {
-      console.log(res);
-      this.topics = res;
-    });
-    this.service.retrieveAllQuestionsFAQ().subscribe((res) => {
-      console.log(res);
-      this.questions = res;
-    });
+      this.service.retrieveAllQuestionFAQ().subscribe((res) => {
+        console.log(res);
+        this.ListeQuestion = res;
+      });
   }
 
-  viewTopics(topic: Topic) {
-    let i = this.topics.indexOf(topic);
-  }
+  // viewTopics(topic: Topic) {
+  //   let i = this.topics.indexOf(topic);
+  // }
 }

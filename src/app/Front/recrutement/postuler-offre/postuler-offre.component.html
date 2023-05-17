@@ -39,23 +39,23 @@
   <div class="container py-4">
     <div class="row">
       <div class="col-lg-7 mx-auto d-flex justify-content-center flex-column">
-        <h3 class="text-center">Postuler</h3>
+        <h3 class="text-center">Join ESPRIT's team</h3>
         <form #f="ngForm">
           <div class="card-body">
             <div class="row">
               <div class="col-md-6">
-                <label for="nom">Nom :</label>
+                <label for="nom">Last Name :</label>
                 <div class="input-group mb-4">
-                  <input class="form-control" placeholder="Nom" aria-label="Nom" type="text" id="nom" name="nom"
-                    [(ngModel)]="inscription.user.firstName" required minlength="3">
+                  <input class="form-control" placeholder="Nom" aria-label="firstName" type="text" id="firstName" name="firstName"
+                      [(ngModel)]="inscription.user.firstName" required minlength="3">
                 </div>
               </div>
 
               <div class="col-md-6">
-                <label>Prénom</label>
+                <label>First Name</label>
                 <div class="input-group mb-4">
-                  <input class="form-control" placeholder="prenom" aria-label="prenom" type="text" name="prenom"
-                    [(ngModel)]="inscription.user.lastName">
+                  <input class="form-control" placeholder="lastName" aria-label="lastName" type="text" id="lastName" name="lastName"
+                        [(ngModel)]="inscription.user.lastName">
                 </div>
               </div>
             </div>
@@ -63,61 +63,103 @@
               <div class="col-md-6">
                 <label>CIN</label>
                 <div class="input-group mb-4">
-                  <input class="form-control" aria-label="CIN" type="text" name="cin" [(ngModel)]="inscription.user.cin"
-                    pattern="[0-9]{8}">
+                  <input class="form-control" placeholder="cin" aria-label="cin" id="cin" type="text" name="cin" [(ngModel)]="inscription.user.cin"
+                      pattern="[0-9]{8}">
                 </div>
               </div>
 
               <div class="col-md-6">
-                <label>Gouvernorat</label>
+                <label>Governorate</label>
                 <div class="input-group mb-4">
-                  <select class="form-control" [(ngModel)]="inscription.user.Gouvernorat">
-                    <option value="Tunis"> Tunis</option>
-                    <option value="Ben Arous"> Ben Arous</option>
-                    <option value="Ariana"> Ariana</option>
-                    <option value="Manouba"> Manouba</option>
-                    <option value="Nabeul"> Nabeul</option>
-                    <option value="Zaghouan"> Zaghouan</option>
-                    <option value="Bizerte"> Bizerte</option>
-                    <option value="Béja"> Béja</option>
-                    <option value="Jendouba"> Jendouba</option>
-                    <option value="Le Kef"> Le Kef</option>
-                    <option value="Siliana"> Siliana</option>
-                    <option value="Kairouan"> Kairouan</option>
-                    <option value="Kasserine"> Kasserine</option>
-                    <option value="Sidi Bouzid"> Sidi Bouzid</option>
-                    <option value="Sousse"> Sousse</option>
-                    <option value="Monastir"> Monastir</option>
-                    <option value="Mahdia"> Mahdia</option>
-                    <option value="Sfax"> Sfax</option>
-                    <option value="Gabès"> Gabès</option>
-                    <option value="Medenine"> Medenine</option>
-                    <option value="Tataouine"> Tataouine</option>
-                    <option value="Tozeur"> Tozeur</option>
-                    <option value="Kebili"> Kebili</option>
-                    <option value="Etranger"> test </option>
-
-                  </select>
+                  <select class="form-control" aria-label="address" type="text" id="address" name="address" [(ngModel)]="inscription.user.address">
+                      <option value="Ariana"> Ariana</option>
+                      <option value="Béja"> Béja</option>
+                      <option value="Ben Arous"> Ben Arous</option>
+                      <option value="Bizerte"> Bizerte</option>
+                      <option value="Gabès"> Gabès</option>
+                      <option value="Jendouba"> Jendouba</option>
+                      <option value="Kairouan"> Kairouan</option>
+                      <option value="Kasserine"> Kasserine</option>
+                      <option value="Kebili"> Kebili</option>
+                      <option value="Le Kef"> Le Kef</option>
+                      <option value="Mahdia"> Mahdia</option>
+                      <option value="Manouba"> Manouba</option>
+                      <option value="Medenine"> Medenine</option>
+                      <option value="Monastir"> Monastir</option>
+                      <option value="Nabeul"> Nabeul</option>
+                      <option value="Sfax"> Sfax</option>
+                      <option value="Siliana"> Siliana</option>
+                      <option value="Sidi Bouzid"> Sidi Bouzid</option>
+                      <option value="Sousse"> Sousse</option>
+                      <option value="Tataouine"> Tataouine</option>
+                      <option value="Tozeur"> Tozeur</option>
+                      <option value="Tunis"> Tunis</option>
+                      <option value="Zaghouan"> Zaghouan</option>
+                    </select>
                 </div>
               </div>
             </div>
             <div class="row">
               <div class="col-md-6">
-                <label>Num Téléphone</label>
+                <label>Phone Number</label>
                 <div class="input-group mb-4">
-                  <input class="form-control" aria-label="Num Téléphone" [(ngModel)]="inscription.user.phone"
-                    type="text">
+                  <input class="form-control" placeholder="Phone Number" aria-label="phone" type="number" id="phone" name="phone"  [(ngModel)]="inscription.user.phone">
                 </div>
               </div>
 
               <div class="col-md-6">
                 <label>Email</label>
                 <div class="input-group">
-                  <input type="email" id="email" name="email" class="form-control" placeholder="flen@esprit.tn"
-                    [(ngModel)]="inscription.user.email" required pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$">
+                  <input class="form-control" placeholder="xxxxx.xxxxx@xxxx.xxx" aria-label="email" type="email" id="email" name="email" 
+                        [(ngModel)]="inscription.user.email" required pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$">
                 </div>
               </div>
             </div>
+
+<!---------------------------------->
+
+            <div class="container col-md-6">
+              <div class="row mt-5">
+                <div class="col-sm-6 col-6 mx-auto">
+                  <!-- Button trigger modal -->
+                  <button type="button" class="btn bg-gradient-primary" (click)="onSumbit()" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                    Add Files
+                  </button>
+
+                  <!-- Modal -->
+                  <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                    <div class="modal-dialog">
+                      <div class="modal-content">
+                        <div class="modal-header">
+                          <h5 class="modal-title" id="exampleModalLabel">Your modal title</h5>
+                        </div>
+                        <div class="modal-body">
+                          <div class="mb-4 col-md-6">
+                          <label>Your C.V.</label>
+                          <div class="input-group">
+                            <input type="file" class="form-control-file" name="cv" (change)="onCvSelected($event)">
+                          </div>
+                        </div>
+                        <div class="mb-4 col-md-6">
+                          <label>Your Cover Letter</label>
+                          <div class="input-group">
+                            <input type="file" class="form-control-file" name="cv" (change)="onLmSelected($event)">
+                          </div>
+                        </div>
+                        </div>
+                        <div class="modal-footer justify-content-between">
+                          <button type="button" (click)="onSumbitFile()" class="btn bg-gradient-primary">Save changes</button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+<!---------------------------------->
+
+            <!-- 
             <div class="row">
               <div class="mb-4 col-md-6">
                 <label>Your C.V.</label>
@@ -136,10 +178,16 @@
               <div class="col-md-12">
                 <button type="submit" class="btn bg-gradient-danger w-100" (click)="onSumbit()">Send</button>
               </div>
-            </div>
+            </div> 
+          -->
+
+<br><br><br>
+
+
           </div>
         </form>
       </div>
     </div>
   </div>
 </section>
+<app-footer></app-footer>

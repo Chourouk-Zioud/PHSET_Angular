@@ -28,10 +28,6 @@ export class AlternanceComponent implements OnInit {
   }
 
   onSumbit() {
-    this.service.newAdmission(this.inscription, 1).subscribe();
-      if (this.cv != null && this.lm != null) {
-        this.service.setFile(this.cv).subscribe();
-        this.service.setFile(this.lm).subscribe();
-      }
+    this.service.newAdmissionALT(this.inscription, 1,2).subscribe();
 }
 }

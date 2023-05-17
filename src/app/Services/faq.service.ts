@@ -8,6 +8,8 @@ import { Certificate } from '../Models/Certificate';
 import { Topic } from '../Models/Topic';
 import { QuestionFAQ } from '../Models/QuestionFAQ';
 import { Exam } from '../Models/Exam';
+import { RequestTraining } from '../Models/RequestTraining';
+import { ReponseFAQ } from '../Models/ReponseFAQ';
 
 @Injectable({
   providedIn: 'root',
@@ -57,5 +59,27 @@ export class FaqService {
 
   retrieveAllExam(): Observable<Exam[]> {
     return this.http.get<Exam[]>(this.URL + '/retrieveAllExams');
+  }
+
+  retrieveAllCertificatesByAccount(id: number): Observable<Certificate[]> {
+    return this.http.get<Certificate[]>(
+      this.URL + '/retrieveAllCertificatesByAccount/' + id
+    );
+  }
+
+  addRequest(request: RequestTraining) {
+    return this.http.post<RequestTraining>(this.URL + '/addRequest', request);
+  }
+
+  retrieveAllQuestionFAQ(): Observable<QuestionFAQ[]> {
+    return this.http.get<QuestionFAQ[]>(this.URL + '/retrieveAllQuestionFAQS');
+  }
+
+  Sort() {
+    return this.http.get<QuestionFAQ[]>(this.URL + '/getNewQuestionFAQ');
+  }
+
+  addResponse(i: number, r: ReponseFAQ) {
+    return this.http.post<ReponseFAQ>(this.URL + '/addResponse/' + i , r);
   }
 }

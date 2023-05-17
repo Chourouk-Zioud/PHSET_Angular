@@ -9,12 +9,8 @@
 </head>
 
 <div class="container-scroller">
-    <!-- partial:partials/_sidebar.html -->
-    <nav class="sidebar sidebar-offcanvas" id="sidebar">
-        <ul class="nav">
-            <app-home-back></app-home-back>
-        </ul>
-    </nav>
+    
+    <app-side-nav-bar></app-side-nav-bar>
     <!-- partial -->
     <div class="main-panel">
         <div class="content-wrapper pb-0">
@@ -24,7 +20,7 @@
             <div class="header-right d-flex flex-wrap mt-2 mt-sm-0">
               <div class="d-flex align-items-center">
               </div>
-              <button type="button" [routerLink]="['/addRecrutementBack']" class="btn btn-primary mt-2 mt-sm-0 btn-icon-text">
+              <button   type="button" [routerLink]="['/addRecrutementBack']" class="btn btn-primary mt-2 mt-sm-0 btn-icon-text">
                 <i class="mdi mdi-plus-circle"></i> Add Offer </button>
             </div>
           </div>
@@ -68,7 +64,7 @@
             <div class="content-wrapper pb-0">
 
                 <div class="row">
-                    <h3>Job Offers :</h3>
+                    <h3 style="color: crimson ; font-size: xx-large;font-family: Georgia, 'Times New Roman', Times, serif;">Job Offers :</h3>
                 </div>
                 <div class="row" *ngFor="let o of ListOfferJob,let i=index">
                     <div class="col-sm-12 stretch-card grid-margin">
@@ -95,7 +91,7 @@
                 </div>
 
                 <div class="row">
-                    <h3>Admission Offers :</h3>
+                    <h3 style="color: crimson ; font-size: xx-large;font-family: Georgia, 'Times New Roman', Times, serif;">Admission Offers :</h3>
                 </div>
                 <div class="row" *ngFor="let o of ListOfferAdmission,let i=index">
                     <div class="col-sm-12 stretch-card grid-margin">

@@ -12,7 +12,8 @@
     <!-- partial:partials/_sidebar.html -->
     <nav class="sidebar sidebar-offcanvas" id="sidebar">
         <ul class="nav">
-            <app-home-back></app-home-back>
+           <app-nav-bar-back></app-nav-bar-back>
+           <app-side-nav-bar></app-side-nav-bar>
         </ul>
     </nav>
     <nav class="navbar default-layout-navbar col-lg-12 col-12 p-0 fixed-top d-flex flex-row">
@@ -37,7 +38,7 @@
                     <div class="col-lg-12 grid-margin stretch-card">
                         <div class="card">
                             <div class="card-body">
-                                <h4 class="card-title">List of Interviews</h4>
+                                <h4 class="card-title" style="color: crimson ; font-size: xx-large;font-family: Georgia, 'Times New Roman', Times, serif;">List of Interviews</h4>
                                 <div class="table-responsive">
                                     <table class="table table-striped">
                                         <thead>
@@ -59,7 +60,7 @@
                                                 <td class="py-3">
                                                     {{ interview.idInterview }}
                                                 </td>
-                                                <td class="py-3">
+                                                <td  class="py-3">
                                                     {{ interview.refInterview }}
                                                 </td>
                                                 <td class="py-3">

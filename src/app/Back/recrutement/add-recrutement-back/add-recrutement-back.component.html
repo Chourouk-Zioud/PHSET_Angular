@@ -1,20 +1,8 @@
-<head>
-    <link rel="stylesheet" href="/assets/Back/vendors/mdi/css/materialdesignicons.min.css">
-    <link rel="stylesheet" href="/assets/Back/vendors/flag-icon-css/css/flag-icon.min.css">
-    <link rel="stylesheet" href="/assets/Back/vendors/css/vendor.bundle.base.css">
-    <link rel="stylesheet" href="/assets/Back/vendors/jquery-bar-rating/css-stars.css" />
-    <link rel="stylesheet" href="/assets/Back/vendors/font-awesome/css/font-awesome.min.css" />
-    <link rel="stylesheet" href="/assets/Back/css/demo_1/style.css" />
-    <link rel="shortcut icon" href="/assets/Back/images/favicon.png" />
-</head>
+
 
 <div class="container-scroller">
-    <!-- partial:partials/_sidebar.html -->
-    <nav class="sidebar sidebar-offcanvas" id="sidebar">
-        <ul class="nav">
-            <app-home-back></app-home-back>
-        </ul>
-    </nav>
+    <app-nav-bar-back></app-nav-bar-back>
+    <app-side-nav-bar></app-side-nav-bar>
     <!-- partial -->
     <div class="main-panel">
         <div class="content-wrapper pb-0">
@@ -50,11 +38,6 @@
                     <a class="navbar-brand brand-logo-mini" href="index.html"><img src="../images/logo-mini.svg"
                             alt="logo" /></a>
                 </div>
-                <!-- <ul class="navbar-nav navbar-nav-right">
-        <li class="nav-item nav-logout d-none d-md-block mr-3">
-        <a class="nav-link" href="#">Status</a>
-        </li>
-    </ul> -->
                 <button class="navbar-toggler navbar-toggler-right d-lg-none align-self-center" type="button"
                     data-toggle="offcanvas">
                     <span class="mdi mdi-menu"></span>
@@ -68,7 +51,7 @@
                 <div class="col-12 grid-margin stretch-card">
                     <div class="card">
                       <div class="card-body">
-                        <h4 class="card-title">Add New Offer</h4><br>
+                        <h4 class="center" style="color: crimson ; font-size: xx-large;font-family: Georgia, 'Times New Roman', Times, serif;">Add New Offer</h4><br>
                         <form class="forms-sample">
                           <div class="form-group">
                             <label for="exampleInputName1">Title</label>
@@ -115,8 +98,10 @@
                               rows="4"
                             ></textarea>
                           </div>
-                          <button type="submit" class="btn btn-primary mr-2"> Submit </button>
-                          <button class="btn btn-light">Cancel</button>
+                          <button type="submit" class="btn btn-danger  mr-2"><i
+                            class="mdi mdi-pen"></i> Submit </button>
+                          <button class="btn btn-danger  " > <i
+                            class="mdi mdi-close-circle-outline"></i>Cancel</button>
                         </form>
                       </div>
                     </div>
